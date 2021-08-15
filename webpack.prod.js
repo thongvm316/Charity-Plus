@@ -47,7 +47,7 @@ module.exports = merge(common, {
 
   plugins: [
     new CleanWebpackPlugin(),
-    new WebpackBundleAnalyzer(),
+    // new WebpackBundleAnalyzer(), // ! just test
     new LodashModuleReplacementPlugin(),
     new MiniCssExtractPlugin({
       filename: 'style.[contenthash].css',

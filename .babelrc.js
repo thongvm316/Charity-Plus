@@ -1,4 +1,19 @@
-const plugins = ['lodash']
+const plugins = [
+  'lodash',
+  [
+    'babel-plugin-transform-imports',
+    {
+      '@material-ui/core': {
+        transform: '@material-ui/core/esm/${member}',
+        preventFullImport: true,
+      },
+      '@material-ui/icons': {
+        transform: '@material-ui/icons/esm/${member}',
+        preventFullImport: true,
+      },
+    },
+  ],
+]
 
 // Cannot load "react-refresh/babel" in production
 if (process.env.NODE_ENV !== 'production') {
