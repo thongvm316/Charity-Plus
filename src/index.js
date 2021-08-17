@@ -1,4 +1,5 @@
 import React from 'react'
+import camelCase from 'lodash/camelCase'
 
 import { makeStyles } from '@material-ui/core/styles'
 
@@ -10,7 +11,7 @@ import {
   Button,
 } from '@material-ui/core'
 
-import Test from './components/Test'
+// import Test from './components/Test'
 
 const useStyles = makeStyles({
   root: {
@@ -33,7 +34,28 @@ import { render } from 'react-dom'
 
 const App = () => {
   const classes = useStyles()
+  const [Test, setTest] = React.useState(null)
+
   const bull = <span className={classes.bullet}>•</span>
+  // const showText = () => {
+  //   import('lodash').then(({ default: _ }) => {
+  //     setText(_.camelCase('wef wefwef'))
+  //   })
+  // }
+
+  // const showText = async () => {
+  //   const { default: _ } = await import('lodash')
+  //   setText(_.camelCase('wef wefwef'))
+  // }
+
+  // const showText = () => {
+  //   import('./components/Test').then((Test) => setTest(Test.default))
+  // }
+
+  const showText = async () => {
+    const { default: Test } = await import('./components/Test')
+    setTest(Test)
+  }
 
   return (
     <Card className={classes.root}>
@@ -58,9 +80,13 @@ const App = () => {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size='small'>Learn More</Button>
+        <Button color='secondary' onClick={showText}>
+          Button
+        </Button>
+        <h1>Oh hai, {camelCase('minh thong')}</h1>
+        {/* {text ? text : null} */}
+        {Test ? Test : null}
       </CardActions>
-      <Test />
     </Card>
   )
 }

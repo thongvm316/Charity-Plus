@@ -1,4 +1,6 @@
 const plugins = [
+  '@babel/transform-runtime', // use for dynamic import with async await
+  '@babel/plugin-syntax-dynamic-import',
   'lodash',
   [
     'babel-plugin-transform-imports',
