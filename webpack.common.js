@@ -1,6 +1,6 @@
 module.exports = {
   entry: {
-    bundle: './src/index.js',
+    bundle: './src/index.jsx',
   },
 
   module: {
