@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = {
   entry: {
     bundle: './src/index.jsx',
@@ -32,6 +34,12 @@ module.exports = {
   devtool: 'source-map',
 
   resolve: {
+    alias: {
+      components: path.resolve(__dirname, 'src/components'),
+      pages: path.resolve(__dirname, 'src/pages'),
+      assets: path.resolve(__dirname, 'src/assets'),
+      layout: path.resolve(__dirname, 'src/layout'),
+    },
     extensions: ['.js', '.jsx'],
   },
 }

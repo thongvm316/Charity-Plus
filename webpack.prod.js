@@ -7,12 +7,14 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const LodashModuleReplacementPlugin = require('lodash-webpack-plugin')
+const MomentLocalesPlugin = require('moment-locales-webpack-plugin')
 const WebpackBundleAnalyzer =
   require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 const plugins = [
   new CleanWebpackPlugin(),
   new LodashModuleReplacementPlugin(),
+  new MomentLocalesPlugin(),
   new MiniCssExtractPlugin({
     filename: 'style.[contenthash].css',
   }),
@@ -38,11 +40,16 @@ module.exports = merge(common, {
   optimization: {
     splitChunks: {
       cacheGroups: {
-        commons: {
-          test: /[\\/]node_modules[\\/]/,
-          name: 'vendors',
+        react: {
+          test: /[\\/]node_modules[\\/]((react).*)[\\/]/,
+          name: 'react',
           chunks: 'all',
         },
+        // commons: {
+        //   test: /[\\/]node_modules[\\/]((?!react).*)[\\/]/,
+        //   name: 'common',
+        //   chunks: 'all',
+        // },
       },
     },
   },
