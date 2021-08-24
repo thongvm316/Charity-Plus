@@ -32,9 +32,14 @@ module.exports = merge(common, {
   optimization: {
     splitChunks: {
       cacheGroups: {
+        react: {
+          test: /[\\/]node_modules[\\/]((react).*)[\\/]/,
+          name: 'react',
+          chunks: 'all',
+        },
         commons: {
-          test: /[\\/]node_modules[\\/]/,
-          name: 'vendors',
+          test: /[\\/]node_modules[\\/]((?!react).*)/,
+          name: 'common',
           chunks: 'all',
         },
       },
@@ -53,6 +58,7 @@ module.exports = merge(common, {
   devServer: {
     contentBase: path.resolve(__dirname, './dist'),
     hot: true,
+    historyApiFallback: true,
   },
 
   plugins: plugins,
