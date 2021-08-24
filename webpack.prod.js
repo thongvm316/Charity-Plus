@@ -46,7 +46,7 @@ module.exports = merge(common, {
           chunks: 'all',
         },
         commons: {
-          test: /[\\/]node_modules[\\/]((?!react).*)[\\/]((?!highcharts).*)[\\/]/,
+          test: /[\\/]node_modules[\\/]((?!react).*)/,
           name: 'common',
           chunks: 'all',
         },
