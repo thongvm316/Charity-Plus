@@ -1,12 +1,13 @@
 @import 'assets/scss/variables';
 
 .header {
+  // section contact
   &__contact {
     background-color: #ebebeb;
     height: 47px;
   }
 
-  .header__container {
+  .header__container-contact {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -19,10 +20,78 @@
   }
 
   &__icon {
-    color: $colorIcon;
+    color: $mainColor;
   }
 
   &__divide {
     margin: 0 1.5rem 0 2rem !important;
+  }
+
+  // section menu
+  .MuiPaper-elevation4 {
+    box-shadow: unset;
+  }
+
+  &__menu {
+    height: 83px;
+  }
+
+  &__container-menu {
+    height: 100%;
+  }
+
+  &__grid {
+    height: 100%;
+    align-items: center;
+  }
+
+  &__logo {
+    width: 165px;
+    height: 23px;
+  }
+
+  &__tabs {
+    .MuiTabs-flexContainer {
+      justify-content: flex-end;
+
+      button {
+        font-size: $fontSize-xl;
+        color: #505050;
+        font-weight: 300;
+      }
+    }
+
+    .PrivateTabIndicator-colorPrimary-4 {
+      background-color: $mainColor;
+    }
+  }
+
+  &__tab {
+    min-width: unset !important;
+    padding: 6px 23px !important;
+  }
+}
+
+.footer {
+  height: 550px;
+  background-color: $footerBackgroundColor;
+  display: flex;
+  align-items: center;
+
+  &__copyright {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 23px;
+
+    p:first-child {
+      font-family: 'Rufina', serif !important;
+      font-size: 30px;
+      color: #fff;
+    }
+
+    p:last-child {
+      font-size: 13px;
+      color: #aeb0ab;
+    }
   }
 }
