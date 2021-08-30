@@ -27,6 +27,7 @@ module.exports = merge(common, {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].js',
     assetModuleFilename: 'images/[hash][ext][query]',
+    publicPath: '/',
   },
 
   optimization: {
@@ -54,6 +55,7 @@ module.exports = merge(common, {
     contentBase: path.resolve(__dirname, './dist'),
     hot: true,
     historyApiFallback: true,
+    compress: true,
   },
 
   plugins: plugins,

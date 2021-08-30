@@ -16,7 +16,7 @@ import Icon from '@material-ui/core/Icon'
 
 import Container from 'components/CustommContainer/CustomContainer'
 
-import moduleName from 'assets/scss/components/footer.scss'
+import 'assets/scss/components/footer.scss'
 
 const Footer = () => {
   const menuLists = ['home', 'about us', 'causes', 'events', 'pages', 'contact']
@@ -76,7 +76,7 @@ const Footer = () => {
               <TextField
                 placeholder='Email Address'
                 id='outlined-margin-none'
-                variant='outlined'
+                variant='standard'
                 className='footer__email-input'
               />
               <Button size='large' className='footer__button'>

@@ -4,7 +4,6 @@ import Causes from 'views/Causes/Causes'
 import Events from 'views/Events/Events'
 import Pages from 'views/Pages/Pages'
 import Contact from 'views/Contact/Contact'
-console.log('object')
 
 const routes = [
   {

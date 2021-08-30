@@ -27,7 +27,7 @@ const MainLayout = () => {
       <Box className='main'>
         <Switch>
           {getRoutes(routes)}
-          <Redirect from='/layout' to={`/layout/home`} />
+          <Redirect from='/layout' to='/layout/home' />
         </Switch>
       </Box>
 

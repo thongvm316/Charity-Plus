@@ -1,7 +1,6 @@
 @import 'assets/scss/variables';
 
 .header {
-  // section contact
   &__contact {
     background-color: #ebebeb;
     height: 47px;
@@ -27,7 +26,6 @@
     margin: 0 1.5rem 0 2rem !important;
   }
 
-  // section menu
   .MuiPaper-elevation4 {
     box-shadow: unset;
   }
@@ -54,7 +52,7 @@
     .MuiTabs-flexContainer {
       justify-content: flex-end;
 
-      button {
+      a {
         font-size: $fontSize-xl;
         color: #505050;
         font-weight: 300;
@@ -62,7 +60,7 @@
     }
 
     .PrivateTabIndicator-colorPrimary-4 {
-      background-color: $mainColor;
+      background-color: $mainColor !important;
     }
   }
 
