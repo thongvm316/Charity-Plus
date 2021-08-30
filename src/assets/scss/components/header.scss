@@ -71,27 +71,3 @@
     padding: 6px 23px !important;
   }
 }
-
-.footer {
-  height: 550px;
-  background-color: $footerBackgroundColor;
-  display: flex;
-  align-items: center;
-
-  &__copyright {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 23px;
-
-    p:first-child {
-      font-family: 'Rufina', serif !important;
-      font-size: 30px;
-      color: #fff;
-    }
-
-    p:last-child {
-      font-size: 13px;
-      color: #aeb0ab;
-    }
-  }
-}

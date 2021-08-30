@@ -1,0 +1,120 @@
+@import 'assets/scss/variables';
+
+.footer {
+  height: 550px;
+  background-color: $footerBackgroundColor;
+  display: flex;
+  align-items: center;
+
+  &__copyright {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 23px;
+
+    p:first-child {
+      font-family: 'Rufina', serif !important;
+      font-size: 30px;
+      color: #fff;
+    }
+
+    p:last-child {
+      font-size: 13px;
+      color: #aeb0ab;
+      padding-top: 15px;
+    }
+  }
+
+  &__divider {
+    background-color: #fff !important;
+  }
+
+  &__contact {
+    margin-top: 50px;
+  }
+
+  &__title {
+    font-size: $fontSizeTitleFooter !important;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 30px !important;
+  }
+
+  &__menu-list {
+    padding-top: 0 !important;
+
+    li {
+      width: fit-content;
+      padding-left: 0 !important;
+      text-transform: uppercase;
+      font-family: unset;
+      font-size: 13px;
+      color: #aeb0ab;
+    }
+  }
+
+  &__email-subscribe {
+    height: 50px;
+  }
+
+  &__email-input {
+    width: 380px;
+    height: 100%;
+    overflow: hidden;
+
+    .PrivateNotchedOutline-root-10 {
+      border: unset;
+    }
+
+    .MuiInputBase-input {
+      background-color: #fff;
+      padding: 16px 33px !important;
+    }
+
+    ::placeholder {
+      color: #7a7a7a;
+      font-size: 13px;
+    }
+  }
+
+  &__button {
+    height: 100%;
+    font-size: 13px !important;
+    background-color: #677dd7 !important;
+    color: #fff !important;
+    border-radius: 0 !important;
+  }
+
+  &__contact-detail {
+    margin-top: 45px;
+  }
+
+  &__title-contact-detail {
+    margin-bottom: 23px !important;
+  }
+
+  &__information-contact {
+    p {
+      color: #aeb0ab;
+      font-size: 13px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__social {
+    button {
+      .MuiSvgIcon-root,
+      .MuiIcon-root {
+        color: #9a9a9a;
+      }
+    }
+
+    button:first-child {
+      padding-left: 0 !important;
+    }
+  }
+}
