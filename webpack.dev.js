@@ -33,8 +33,13 @@ module.exports = merge(common, {
   optimization: {
     splitChunks: {
       cacheGroups: {
+        react: {
+          test: /[\\/]node_modules[\\/]((react).*)[\\/]/,
+          name: 'react',
+          chunks: 'all',
+        },
         commons: {
-          test: /[\\/]node_modules[\\/]/,
+          test: /[\\/]node_modules[\\/]((?!react).*)/,
           name: 'common',
           chunks: 'all',
         },

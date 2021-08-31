@@ -1,4 +1,5 @@
 import React from 'react'
+import classNames from 'classnames'
 import { Link } from 'react-router-dom'
 
 import AppBar from '@material-ui/core/AppBar'
@@ -10,6 +11,7 @@ import Grid from '@material-ui/core/Grid'
 import MailOutlineOutlinedIcon from '@material-ui/icons/MailOutlineOutlined'
 import PhoneCallbackOutlinedIcon from '@material-ui/icons/PhoneCallbackOutlined'
 import Divider from '@material-ui/core/Divider'
+import useMediaQuery from '@material-ui/core/useMediaQuery'
 
 import Image from 'components/Image/Image'
 import Container from 'components/CustommContainer/CustomContainer'
@@ -18,6 +20,8 @@ import Logo from 'assets/img/logo.png'
 import 'assets/scss/components/header.scss'
 
 const Header = () => {
+  const matches = useMediaQuery('(max-width:959.9px)')
+
   const [value, setValue] = React.useState(0)
 
   const handleChange = (event, newValue) => {
@@ -32,6 +36,11 @@ const Header = () => {
     { page: 'pages', linkTo: `/layout/pages` },
     { page: 'contact', linkTo: `/layout/contact` },
   ]
+
+  const tabsClass = classNames({
+    header__tabs: true,
+    'header__tabs--hide': matches,
+  })
 
   return (
     <Box className='header'>
@@ -56,17 +65,17 @@ const Header = () => {
       <AppBar className='header__menu' color='transparent' position='static'>
         <Container className='header__container-menu'>
           <Grid container className='header__grid'>
-            <Grid item xs={12} sm={12} md={12} lg={12} xl={2}>
+            <Grid item xs={12} sm={2} md={2} lg={2} xl={2}>
               <Image className='header__logo' src={Logo} alt='logo' />
             </Grid>
-            <Grid item xs={12} sm={12} md={12} lg={12} xl={10}>
+            <Grid item xs={12} sm={10} md={10} lg={10} xl={10}>
               <Tabs
                 value={value}
                 onChange={handleChange}
                 indicatorColor='primary'
                 textColor='primary'
                 centered
-                className='header__tabs'
+                className={tabsClass}
               >
                 {menuLists.map((item, i) => (
                   <Tab

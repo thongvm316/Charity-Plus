@@ -24,14 +24,14 @@ const MainLayout = () => {
     <>
       <Header />
 
-      <Box className='main'>
+      {/* <Box className='main'>
         <Switch>
           {getRoutes(routes)}
           <Redirect from='/layout' to='/layout/home' />
         </Switch>
-      </Box>
+      </Box> */}
 
-      <Footer />
+      {/* <Footer /> */}
     </>
   )
 }

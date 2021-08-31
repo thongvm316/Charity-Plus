@@ -1,4 +1,5 @@
 @import 'assets/scss/variables';
+@import 'assets/scss/responsive';
 
 .header {
   &__contact {
@@ -67,5 +68,45 @@
   &__tab {
     min-width: unset !important;
     padding: 6px 23px !important;
+  }
+
+  /* Condition for render menu in xs screen */
+  &__tabs--hide {
+    display: none !important;
+  }
+}
+
+/* Responsive */
+@include screen('xs') {
+  .header {
+    .header__container-contact {
+      p {
+        font-size: $fontSize-md;
+      }
+    }
+
+    &__divide {
+      margin: 0 0.7rem 0 0.7rem !important;
+    }
+  }
+}
+
+@include screen('sm') {
+  .header {
+    .header__container-contact {
+      p {
+        font-size: $fontSize-md;
+      }
+    }
+  }
+}
+
+@include screen('md') {
+  .header {
+    .header__container-contact {
+      p {
+        font-size: $fontSize-md;
+      }
+    }
   }
 }
