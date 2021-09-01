@@ -70,8 +70,14 @@
     padding: 6px 23px !important;
   }
 
-  /* Condition for render menu in xs screen */
-  &__tabs--hide {
+  &__icon-bars {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  /* Class for condition rendering */
+  .hide-for-small-device,
+  .icon-bars-hide {
     display: none !important;
   }
 }
@@ -79,6 +85,10 @@
 /* Responsive */
 @include screen('xs') {
   .header {
+    &__menu {
+      height: auto;
+    }
+
     .header__container-contact {
       p {
         font-size: $fontSize-md;
@@ -88,14 +98,46 @@
     &__divide {
       margin: 0 0.7rem 0 0.7rem !important;
     }
+
+    &__tabs {
+      .MuiTabs-flexContainer {
+        flex-direction: column;
+
+        a {
+          width: fit-content;
+        }
+      }
+
+      .MuiTabs-indicator {
+        display: none;
+      }
+    }
   }
 }
 
 @include screen('sm') {
   .header {
+    &__menu {
+      height: auto;
+    }
+
     .header__container-contact {
       p {
         font-size: $fontSize-md;
+      }
+    }
+
+    &__tabs {
+      .MuiTabs-flexContainer {
+        flex-direction: column;
+
+        a {
+          width: fit-content;
+        }
+      }
+
+      .MuiTabs-indicator {
+        display: none;
       }
     }
   }

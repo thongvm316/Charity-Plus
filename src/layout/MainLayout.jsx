@@ -29,9 +29,9 @@ const MainLayout = () => {
           {getRoutes(routes)}
           <Redirect from='/layout' to='/layout/home' />
         </Switch>
-      </Box> */}
+      </Box>
 
-      {/* <Footer /> */}
+      <Footer /> */}
     </>
   )
 }

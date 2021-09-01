@@ -6,12 +6,15 @@ import AppBar from '@material-ui/core/AppBar'
 import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
 import Box from '@material-ui/core/Box'
-import IconButton from '@material-ui/core/IconButton'
 import Grid from '@material-ui/core/Grid'
+import Divider from '@material-ui/core/Divider'
+import Collapse from '@material-ui/core/Collapse'
+import useMediaQuery from '@material-ui/core/useMediaQuery'
+
+import IconButton from '@material-ui/core/IconButton'
+import Icon from '@material-ui/core/Icon'
 import MailOutlineOutlinedIcon from '@material-ui/icons/MailOutlineOutlined'
 import PhoneCallbackOutlinedIcon from '@material-ui/icons/PhoneCallbackOutlined'
-import Divider from '@material-ui/core/Divider'
-import useMediaQuery from '@material-ui/core/useMediaQuery'
 
 import Image from 'components/Image/Image'
 import Container from 'components/CustommContainer/CustomContainer'
@@ -20,12 +23,18 @@ import Logo from 'assets/img/logo.png'
 import 'assets/scss/components/header.scss'
 
 const Header = () => {
-  const matches = useMediaQuery('(max-width:959.9px)')
+  const matchesForMenuList = useMediaQuery('(max-width:959.9px)')
+  const matchesForIconBars = useMediaQuery('(min-width:960px)')
 
   const [value, setValue] = React.useState(0)
+  const [isHideMenuList, setIsHideMenuList] = React.useState(false)
 
   const handleChange = (event, newValue) => {
     setValue(newValue)
+  }
+
+  const handleChangeIsHideMenuList = () => {
+    setIsHideMenuList(!isHideMenuList)
   }
 
   const menuLists = [
@@ -39,7 +48,12 @@ const Header = () => {
 
   const tabsClass = classNames({
     header__tabs: true,
-    'header__tabs--hide': matches,
+    'hide-for-small-device': matchesForMenuList && isHideMenuList,
+  })
+
+  const iconBarsClass = classNames({
+    'header__icon-bars': true,
+    'icon-bars-hide': matchesForIconBars,
   })
 
   return (
@@ -65,10 +79,25 @@ const Header = () => {
       <AppBar className='header__menu' color='transparent' position='static'>
         <Container className='header__container-menu'>
           <Grid container className='header__grid'>
-            <Grid item xs={12} sm={2} md={2} lg={2} xl={2}>
+            <Grid item xs={3} sm={3} md={3} lg={3} xl={3}>
               <Image className='header__logo' src={Logo} alt='logo' />
             </Grid>
-            <Grid item xs={12} sm={10} md={10} lg={10} xl={10}>
+            <Grid
+              item
+              className={iconBarsClass}
+              xs={9}
+              sm={9}
+              md={9}
+              lg={9}
+              xl={9}
+            >
+              <IconButton
+                onClick={() => handleChangeIsHideMenuList('MenuList')}
+              >
+                <Icon className='fas fa-bars' />
+              </IconButton>
+            </Grid>
+            <Grid item xs={12} sm={12} md={9} lg={9} xl={9}>
               <Tabs
                 value={value}
                 onChange={handleChange}
