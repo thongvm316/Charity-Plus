@@ -1,5 +1,9 @@
-@import 'assets/scss/variables';
 @import 'assets/scss/responsive';
+
+/* variables */
+$mainColor: #82c7a6;
+$fontSize-xl: 0.875rem;
+$fontSize-md: 0.688rem;
 
 .header {
   &__contact {
@@ -76,14 +80,13 @@
   }
 
   /* Class for condition rendering */
-  .hide-for-small-device,
   .icon-bars-hide {
     display: none !important;
   }
 }
 
 /* Responsive */
-@include screen('xs') {
+@include breakpoint-down(sm) {
   .header {
     &__menu {
       height: auto;
@@ -93,10 +96,6 @@
       p {
         font-size: $fontSize-md;
       }
-    }
-
-    &__divide {
-      margin: 0 0.7rem 0 0.7rem !important;
     }
 
     &__tabs {
@@ -115,30 +114,10 @@
   }
 }
 
-@include screen('sm') {
+@include screen('xs') {
   .header {
-    &__menu {
-      height: auto;
-    }
-
-    .header__container-contact {
-      p {
-        font-size: $fontSize-md;
-      }
-    }
-
-    &__tabs {
-      .MuiTabs-flexContainer {
-        flex-direction: column;
-
-        a {
-          width: fit-content;
-        }
-      }
-
-      .MuiTabs-indicator {
-        display: none;
-      }
+    &__divide {
+      margin: 0 0.7rem 0 1rem !important;
     }
   }
 }

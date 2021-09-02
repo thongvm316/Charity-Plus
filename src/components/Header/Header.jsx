@@ -34,7 +34,7 @@ const Header = () => {
   }
 
   const handleChangeIsHideMenuList = () => {
-    setIsHideMenuList(!isHideMenuList)
+    setIsHideMenuList((prev) => !prev)
   }
 
   const menuLists = [
@@ -45,11 +45,6 @@ const Header = () => {
     { page: 'pages', linkTo: `/layout/pages` },
     { page: 'contact', linkTo: `/layout/contact` },
   ]
-
-  const tabsClass = classNames({
-    header__tabs: true,
-    'hide-for-small-device': matchesForMenuList && isHideMenuList,
-  })
 
   const iconBarsClass = classNames({
     'header__icon-bars': true,
@@ -91,31 +86,32 @@ const Header = () => {
               lg={9}
               xl={9}
             >
-              <IconButton
-                onClick={() => handleChangeIsHideMenuList('MenuList')}
-              >
+              <IconButton onClick={handleChangeIsHideMenuList}>
                 <Icon className='fas fa-bars' />
               </IconButton>
             </Grid>
             <Grid item xs={12} sm={12} md={9} lg={9} xl={9}>
-              <Tabs
-                value={value}
-                onChange={handleChange}
-                indicatorColor='primary'
-                textColor='primary'
-                centered
-                className={tabsClass}
-              >
-                {menuLists.map((item, i) => (
-                  <Tab
-                    className='header__tab'
-                    component={Link}
-                    to={item.linkTo}
-                    key={i}
-                    label={item.page}
-                  />
-                ))}
-              </Tabs>
+              <Collapse in={!matchesForMenuList || isHideMenuList}>
+                <Tabs
+                  value={value}
+                  onChange={handleChange}
+                  indicatorColor='primary'
+                  textColor='primary'
+                  centered
+                  className='header__tabs'
+                >
+                  {menuLists.map((item, i) => (
+                    <Tab
+                      className='header__tab'
+                      onClick={handleChangeIsHideMenuList}
+                      component={Link}
+                      to={item.linkTo}
+                      key={i}
+                      label={item.page}
+                    />
+                  ))}
+                </Tabs>
+              </Collapse>
             </Grid>
           </Grid>
         </Container>

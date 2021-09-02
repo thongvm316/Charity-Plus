@@ -1,3 +1,29 @@
+$breakpoints-up: (
+  'xs': '599px',
+  'sm': '959px',
+  'md': '1279px',
+  'lg': '1919px',
+);
+
+@mixin breakpoint-up($size) {
+  @media (min-width: map-get($breakpoints-up, $size)) {
+    @content;
+  }
+}
+
+$breakpoints-down: (
+  'xs': '599px',
+  'sm': '959px',
+  'md': '1279px',
+  'lg': '1919px',
+);
+
+@mixin breakpoint-down($size) {
+  @media (max-width: map-get($breakpoints-down, $size)) {
+    @content;
+  }
+}
+
 @mixin screen($breakpoint) {
   @if ($breakpoint == 'xl') {
     @media (min-width: 1920px) {

@@ -43,7 +43,7 @@ const Footer = () => {
         <Divider className='footer__divider' />
 
         <Grid container className='footer__contact'>
-          <Grid item xs={12} sm={12} md={12} lg={12} xl={3}>
+          <Grid item xs={6} sm={6} md={3} lg={3} xl={3}>
             <Typography className='footer__title' variant='h6'>
               Quick links
             </Typography>
@@ -55,7 +55,7 @@ const Footer = () => {
             </MenuList>
           </Grid>
 
-          <Grid item xs={12} sm={12} md={12} lg={12} xl={3}>
+          <Grid item xs={6} sm={6} md={3} lg={3} xl={3}>
             <Typography className='footer__title' variant='h6'>
               Causes
             </Typography>
@@ -67,7 +67,7 @@ const Footer = () => {
             </MenuList>
           </Grid>
 
-          <Grid item xs={12} sm={12} md={12} lg={12} xl={6}>
+          <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
             <Typography className='footer__title' variant='h6'>
               News letter
             </Typography>
@@ -98,10 +98,10 @@ const Footer = () => {
               <Grid
                 item
                 className='footer__information-contact'
-                xs={12}
-                sm={12}
-                md={12}
-                lg={12}
+                xs={6}
+                sm={6}
+                md={6}
+                lg={6}
                 xl={6}
               >
                 <Typography component='p'>Second street nagar</Typography>
@@ -111,10 +111,10 @@ const Footer = () => {
               <Grid
                 item
                 className='footer__information-contact'
-                xs={12}
-                sm={12}
-                md={12}
-                lg={12}
+                xs={6}
+                sm={6}
+                md={6}
+                lg={6}
                 xl={6}
               >
                 <Typography component='p'>Email : info@charityplus</Typography>

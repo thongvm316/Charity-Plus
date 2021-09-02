@@ -1,4 +1,8 @@
-@import 'assets/scss/variables';
+@import 'assets/scss/responsive';
+
+/* variable */
+$fontSizeTitleFooter: 1.125rem;
+$footerBackgroundColor: #515350;
 
 .footer {
   height: 550px;
@@ -115,6 +119,51 @@
 
     button:first-child {
       padding-left: 0 !important;
+    }
+  }
+}
+
+/* Responsive */
+@include screen('xs') {
+  .footer {
+    padding-top: 1rem;
+
+    &__copyright {
+      p:first-child {
+        font-size: 20px;
+      }
+
+      p:last-child {
+        font-size: 11px;
+        padding-top: 7px;
+      }
+    }
+
+    &__menu-list {
+      li {
+        min-height: auto;
+        font-size: 11px !important;
+      }
+    }
+
+    &__button {
+      width: 90px;
+      font-size: 11px !important;
+    }
+
+    &__information-contact {
+      p {
+        font-size: 11px !important;
+      }
+    }
+  }
+}
+
+@include breakpoint-down(md) {
+  .footer {
+    height: auto;
+    &__email-input {
+      width: auto;
     }
   }
 }
