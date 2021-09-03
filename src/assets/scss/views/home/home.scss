@@ -14,10 +14,16 @@ $fontSizeSmallTextInBannerTitle: (
   'large': 24px,
 );
 
+$backgroundColor: #687dd8;
+$greenColor: #82c7a6;
+
 /* Style */
 .home {
-  height: 700px;
-  background-color: #687dd8;
+  /* Banner Section */
+  &__banner {
+    height: 700px;
+    background-color: $backgroundColor;
+  }
 
   &__banner-title {
     display: flex;
@@ -47,5 +53,124 @@ $fontSizeSmallTextInBannerTitle: (
         border: 1px solid #fff;
       }
     }
+  }
+
+  /* Cause List Section */
+  &__cause-list {
+    height: 875px;
+    padding-top: 212px;
+  }
+
+  &__cause-list-options {
+    display: flex;
+    justify-content: space-between;
+
+    .MuiPaper-elevation1 {
+      box-shadow: unset !important;
+    }
+  }
+
+  &__cause-list-card {
+    width: 275px;
+    height: 500px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__cause-list-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 56px;
+
+    h5 {
+      font-size: 30px;
+      font-family: $rufina !important;
+    }
+
+    p {
+      position: relative;
+      font-size: 14px;
+      color: #879094;
+
+      &::after {
+        position: absolute;
+        content: '';
+        background-color: $greenColor;
+        width: 22px;
+        height: 2px;
+        bottom: -12px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  &__cause-list-card-header {
+    .MuiCardHeader-content {
+      .MuiCardHeader-title {
+        font-size: 25px;
+      }
+    }
+  }
+
+  &__cause-list-card-media {
+    width: 125px;
+    height: 125px;
+  }
+
+  &__cause-list-card-content {
+    margin-bottom: 58px;
+  }
+
+  &__cause-list-price {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+  }
+
+  &__cause-list-divider {
+    height: 48px !important;
+  }
+
+  &__cause-list-raised {
+    h6 {
+      font-size: 14px;
+      color: #6f7a7f;
+      text-transform: uppercase;
+    }
+
+    p {
+      font-size: 24px;
+    }
+  }
+
+  &__cause-list-goal {
+    @extend .home__cause-list-raised;
+
+    p {
+      color: $greenColor;
+    }
+  }
+
+  &__cause-list-content {
+    font-size: 14px !important;
+    color: #6f7a7f !important;
+  }
+
+  &__cause-list-card-actions {
+    .MuiButton-containedPrimary {
+      background-color: $backgroundColor;
+      font-size: 14px;
+    }
+  }
+}
+
+.donators {
+  &__tile {
+    @extend .home__cause-list-title;
   }
 }
