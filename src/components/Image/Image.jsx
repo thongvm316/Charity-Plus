@@ -7,7 +7,7 @@ const Image = (props) => {
   const { src, alt, ...rest } = props
   return (
     <div {...rest}>
-      <img className='common-style' src={src} alt={alt} />
+      <img className='image-common-style' src={src} alt={alt} />
     </div>
   )
 }

@@ -35,7 +35,7 @@ const SwiperComponent = () => {
         className='mySwiper'
       >
         <SwiperSlide className='swiper-home__slide'>
-          <Card className='swiper-home__card'>
+          <Card variant='outlined' className='swiper-home__card'>
             <CardActionArea className='swiper-home__action-area'>
               <CardMedia
                 className='swiper-home__card-media'
@@ -51,7 +51,7 @@ const SwiperComponent = () => {
           </Card>
         </SwiperSlide>
         <SwiperSlide className='swiper-home__slide'>
-          <Card className='swiper-home__card'>
+          <Card variant='outlined' className='swiper-home__card'>
             <CardActionArea className='swiper-home__action-area'>
               <CardMedia
                 className='swiper-home__card-media'
@@ -67,7 +67,7 @@ const SwiperComponent = () => {
           </Card>
         </SwiperSlide>
         <SwiperSlide className='swiper-home__slide'>
-          <Card className='swiper-home__card'>
+          <Card variant='outlined' className='swiper-home__card'>
             <CardActionArea className='swiper-home__action-area'>
               <CardMedia
                 className='swiper-home__card-media'
