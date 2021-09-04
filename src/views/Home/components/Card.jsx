@@ -9,7 +9,7 @@ import CardMedia from '@material-ui/core/CardMedia'
 import CardContent from '@material-ui/core/CardContent'
 import CardActions from '@material-ui/core/CardActions'
 import Button from 'components/CustomButton/CustomButton'
-import Typography from '@material-ui/core/Typography'
+import Typography from 'components/Typography/CustomTypography'
 
 const CustomCard = (props) => {
   const { header, image, content, ...rest } = props

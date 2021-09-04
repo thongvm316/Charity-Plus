@@ -2,7 +2,7 @@ import React from 'react'
 
 import Box from '@material-ui/core/Box'
 import Button from '@material-ui/core/Button'
-import Typography from '@material-ui/core/Typography'
+import Typography from 'components/Typography/CustomTypography'
 import Divider from '@material-ui/core/Divider'
 import IconButton from '@material-ui/core/IconButton'
 import Grid from '@material-ui/core/Grid'

@@ -62,9 +62,6 @@ $greenColor: #82c7a6;
   }
 
   &__cause-list-options {
-    display: flex;
-    justify-content: space-between;
-
     .MuiPaper-elevation1 {
       box-shadow: unset !important;
     }
@@ -73,6 +70,7 @@ $greenColor: #82c7a6;
   &__cause-list-card {
     width: 275px;
     height: 500px;
+    margin: auto;
 
     display: flex;
     flex-direction: column;
@@ -172,5 +170,27 @@ $greenColor: #82c7a6;
 .donators {
   &__tile {
     @extend .home__cause-list-title;
+  }
+
+  &__featured-title {
+    font-size: 20px !important;
+    font-family: $rufina !important;
+  }
+
+  &__featured-images {
+    display: flex;
+  }
+
+  &__featured-name {
+    display: flex;
+  }
+
+  &__divider {
+    display: flex;
+    justify-content: center;
+
+    .MuiDivider-vertical {
+      height: 100% !important;
+    }
   }
 }

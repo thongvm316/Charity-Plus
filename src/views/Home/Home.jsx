@@ -2,10 +2,13 @@ import React from 'react'
 
 import Box from '@material-ui/core/Box'
 import Divider from '@material-ui/core/Divider'
+import Grid from '@material-ui/core/Grid'
 import Button from 'components/CustomButton/CustomButton'
-import Typography from '@material-ui/core/Typography'
+import Typography from 'components/Typography/CustomTypography'
+
 import Container from 'components/CustommContainer/CustomContainer'
 import Image from 'components/Image/Image'
+import LinearWithValueLabel from './components/Progress'
 
 import Swiper from './components/Swiper'
 import Card from './components/Card'
@@ -47,32 +50,38 @@ const Home = () => {
             </Typography>
           </Box>
 
-          <Box className='home__cause-list-options'>
-            <Card
-              className='home__cause-list-card'
-              header='Food'
-              image={Food}
-              content='Lorem Ipsum is simply dummy 
-              of the printing and typesetting industry 
-              Lorem Ipsum.'
-            />
-            <Card
-              className='home__cause-list-card'
-              header='Health'
-              image={Health}
-              content='Lorem Ipsum is simply dummy 
-              of the printing and typesetting industry 
-              Lorem Ipsum.'
-            />
-            <Card
-              className='home__cause-list-card'
-              header='Water'
-              image={Water}
-              content='Lorem Ipsum is simply dummy 
-              of the printing and typesetting industry 
-              Lorem Ipsum.'
-            />
-          </Box>
+          <Grid container className='home__cause-list-options'>
+            <Grid item xs={12} sm={12} md={12} lg={12} xl={4}>
+              <Card
+                className='home__cause-list-card'
+                header='Food'
+                image={Food}
+                content='Lorem Ipsum is simply dummy 
+                  of the printing and typesetting industry 
+                  Lorem Ipsum.'
+              />
+            </Grid>
+            <Grid item xs={12} sm={12} md={12} lg={12} xl={4}>
+              <Card
+                className='home__cause-list-card'
+                header='Health'
+                image={Health}
+                content='Lorem Ipsum is simply dummy 
+                  of the printing and typesetting industry 
+                  Lorem Ipsum.'
+              />
+            </Grid>
+            <Grid item xs={12} sm={12} md={12} lg={12} xl={4}>
+              <Card
+                className='home__cause-list-card'
+                header='Water'
+                image={Water}
+                content='Lorem Ipsum is simply dummy 
+                of the printing and typesetting industry 
+                Lorem Ipsum.'
+              />
+            </Grid>
+          </Grid>
         </Box>
 
         <Box className='donators'>
@@ -85,8 +94,16 @@ const Home = () => {
             </Typography>
           </Box>
 
-          <Box className='donators__information'>
-            <Box className='donators__featured'>
+          <Grid container className='donators__information'>
+            <Grid
+              item
+              className='donators__featured'
+              xs={12}
+              sm={12}
+              md={12}
+              lg={12}
+              xl={5}
+            >
               <Typography component='h6' className='donators__featured-title'>
                 Featured Donators
               </Typography>
@@ -106,17 +123,88 @@ const Home = () => {
                 />
               </Box>
 
-              <Box className='donators__featured-name'></Box>
-            </Box>
+              <Box className='donators__featured-name'>
+                <div>
+                  <Typography component='h6'>name here</Typography>
+                  <Typography component='h6'>donated $800</Typography>
+                </div>
+                <div>
+                  <Typography component='h6'>name here</Typography>
+                  <Typography component='h6'>donated $800</Typography>
+                </div>
+                <div>
+                  <Typography component='h6'>name here</Typography>
+                  <Typography component='h6'>donated $800</Typography>
+                </div>
+              </Box>
+            </Grid>
 
-            <Divider
-              flexItem
-              orientation='vertical'
+            <Grid
+              item
               className='donators__divider'
-            />
+              xs={12}
+              sm={12}
+              md={12}
+              lg={12}
+              xl={2}
+            >
+              <Divider flexItem orientation='vertical' />
+            </Grid>
 
-            <Box className='donators__now'></Box>
-          </Box>
+            <Grid
+              item
+              className='donators__now'
+              xs={12}
+              sm={12}
+              md={12}
+              lg={12}
+              xl={5}
+            >
+              <Typography component='h6' className='donators__now-title'>
+                Donate Now
+              </Typography>
+
+              <Box className='donators__now-raised'>
+                <LinearWithValueLabel />
+                <Box>
+                  <Typography component='p'>
+                    raised&nbsp;<span>$2000</span>
+                  </Typography>
+                  <Typography component='p'>
+                    gold&nbsp;<span>$150,000,00</span>
+                  </Typography>
+                </Box>
+              </Box>
+
+              <Box className='donators__now-end-time'>
+                <Typography component='h6'>ends</Typography>
+
+                <Box>
+                  <Typography component='p'>
+                    <span>20</span>
+                    <span>days</span>
+                  </Typography>
+
+                  <Typography component='p'>
+                    <span>20</span>
+                    <span>hr</span>
+                  </Typography>
+
+                  <Typography component='p'>
+                    <span>20</span>
+                    <span>min</span>
+                  </Typography>
+
+                  <Typography component='p'>
+                    <span>20</span>
+                    <span>sec</span>
+                  </Typography>
+                </Box>
+
+                <Button variant='contained'>donate now</Button>
+              </Box>
+            </Grid>
+          </Grid>
         </Box>
 
         <Box className='about-us'></Box>
