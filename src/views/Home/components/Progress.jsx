@@ -41,11 +41,7 @@ const LinearWithValueLabel = () => {
     }
   }, [])
 
-  return (
-    <div className={classes.root}>
-      <LinearProgressWithLabel value={progress} />
-    </div>
-  )
+  return <LinearProgressWithLabel value={progress} />
 }
 
 export default LinearWithValueLabel

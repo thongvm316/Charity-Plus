@@ -126,15 +126,21 @@ const Home = () => {
               <Box className='donators__featured-name'>
                 <div>
                   <Typography component='h6'>name here</Typography>
-                  <Typography component='h6'>donated $800</Typography>
+                  <Typography component='p'>
+                    donated <span>$800</span>
+                  </Typography>
                 </div>
                 <div>
                   <Typography component='h6'>name here</Typography>
-                  <Typography component='h6'>donated $800</Typography>
+                  <Typography component='p'>
+                    donated <span>$800</span>
+                  </Typography>
                 </div>
                 <div>
                   <Typography component='h6'>name here</Typography>
-                  <Typography component='h6'>donated $800</Typography>
+                  <Typography component='p'>
+                    donated <span>$800</span>
+                  </Typography>
                 </div>
               </Box>
             </Grid>
@@ -166,12 +172,12 @@ const Home = () => {
 
               <Box className='donators__now-raised'>
                 <LinearWithValueLabel />
-                <Box>
+                <Box className='donators__now-raised-detail'>
                   <Typography component='p'>
                     raised&nbsp;<span>$2000</span>
                   </Typography>
                   <Typography component='p'>
-                    gold&nbsp;<span>$150,000,00</span>
+                    goal&nbsp;<span>$150,000,00</span>
                   </Typography>
                 </Box>
               </Box>
@@ -179,7 +185,7 @@ const Home = () => {
               <Box className='donators__now-end-time'>
                 <Typography component='h6'>ends</Typography>
 
-                <Box>
+                <Box className='donators__now-end-time-detail'>
                   <Typography component='p'>
                     <span>20</span>
                     <span>days</span>

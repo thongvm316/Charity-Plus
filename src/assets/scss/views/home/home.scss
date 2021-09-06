@@ -16,6 +16,7 @@ $fontSizeSmallTextInBannerTitle: (
 
 $backgroundColor: #687dd8;
 $greenColor: #82c7a6;
+$greenColor2: #9be9c0;
 
 /* Style */
 .home {
@@ -175,14 +176,45 @@ $greenColor: #82c7a6;
   &__featured-title {
     font-size: 20px !important;
     font-family: $rufina !important;
+    text-align: center;
+    margin-bottom: 27px !important;
+    color: #262626;
   }
 
   &__featured-images {
     display: flex;
+    justify-content: space-between;
+    margin-bottom: 35px;
+
+    > div {
+      width: 134px;
+      height: 140px;
+    }
   }
 
   &__featured-name {
     display: flex;
+    justify-content: space-between;
+
+    > div {
+      width: 134px;
+      text-align: left;
+
+      h6 {
+        font-size: 13px;
+        text-transform: uppercase;
+        color: #6f7a7f;
+      }
+
+      p {
+        font-size: 16px;
+        text-transform: uppercase;
+
+        span {
+          color: $greenColor;
+        }
+      }
+    }
   }
 
   &__divider {
@@ -191,6 +223,88 @@ $greenColor: #82c7a6;
 
     .MuiDivider-vertical {
       height: 100% !important;
+    }
+  }
+
+  &__now-title {
+    @extend .donators__featured-title;
+  }
+
+  &__now-raised {
+    height: 140px;
+    padding: 38px 30px;
+    margin-bottom: 17px;
+    background-color: $greenColor;
+
+    .MuiLinearProgress-root {
+      height: 8px !important;
+      background-color: #e7e7e7 !important;
+
+      .MuiLinearProgress-barColorPrimary {
+        background-color: $greenColor2;
+      }
+    }
+  }
+
+  &__now-raised-detail {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 14px;
+
+    p {
+      font-size: 14px !important;
+      color: #fff !important;
+      text-transform: uppercase;
+
+      span {
+        font-size: 24px;
+      }
+    }
+  }
+
+  &__now-end-time {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h6 {
+      font-size: 14px;
+      text-transform: uppercase;
+
+      flex-basis: 10%;
+    }
+
+    button {
+      flex-basis: 30%;
+      height: 50px;
+      background-color: $backgroundColor;
+    }
+  }
+
+  &__now-end-time-detail {
+    display: flex;
+    justify-content: space-evenly;
+    flex-basis: 60%;
+
+    p {
+      width: 50px;
+      height: 50px;
+      border: 1px solid #e3e3e3;
+      text-align: center;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      span:first-child {
+        font-size: 15px;
+      }
+
+      span:last-child {
+        font-size: 11px;
+        color: #6f7a7f;
+        text-transform: uppercase;
+      }
     }
   }
 }
