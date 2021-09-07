@@ -18,6 +18,8 @@ $backgroundColor: #687dd8;
 $greenColor: #82c7a6;
 $greenColor2: #9be9c0;
 
+// Variables about-us : font-size, color, backgroundColor
+
 /* Style */
 .home {
   /* Banner Section */
@@ -169,8 +171,21 @@ $greenColor2: #9be9c0;
 }
 
 .donators {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  height: 650px;
+  background-color: #e9e9e9;
+
   &__tile {
     @extend .home__cause-list-title;
+  }
+
+  &__information {
+    background-color: #fff;
+    height: 367px;
+    padding: 40px 50px 60px 50px;
   }
 
   &__featured-title {
@@ -306,5 +321,34 @@ $greenColor2: #9be9c0;
         text-transform: uppercase;
       }
     }
+  }
+}
+
+.about-us {
+  display: flex;
+  align-items: center;
+  height: 745px;
+
+  position: relative;
+  &::after {
+    position: absolute;
+    z-index: -1;
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 337px;
+    background-image: url('assets/img/home/bluebackground-aboutus.png');
+  }
+
+  &__paper {
+    width: 338px;
+    height: 588px;
+    padding: 15px;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
   }
 }

@@ -2,15 +2,21 @@ import React from 'react'
 
 import Box from '@material-ui/core/Box'
 import Divider from '@material-ui/core/Divider'
+import Paper from '@material-ui/core/Paper'
 import Grid from '@material-ui/core/Grid'
+import IconButton from '@material-ui/core/IconButton'
 import Button from 'components/CustomButton/CustomButton'
 import Typography from 'components/Typography/CustomTypography'
+
+import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos'
+import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos'
 
 import Container from 'components/CustommContainer/CustomContainer'
 import Image from 'components/Image/Image'
 import LinearWithValueLabel from './components/Progress'
 
 import Swiper from './components/Swiper'
+import SwiperAboutUs from './components/SwiperAboutUs'
 import Card from './components/Card'
 
 import Food from 'assets/img/home/food.png'
@@ -39,8 +45,8 @@ const Home = () => {
         </Container>
       </Box>
 
-      <Container className='home__container'>
-        <Box className='home__cause-list'>
+      <Box className='home__cause-list'>
+        <Container>
           <Box className='home__cause-list-title'>
             <Typography component='h5' variant='h5'>
               Cause List
@@ -82,9 +88,11 @@ const Home = () => {
               />
             </Grid>
           </Grid>
-        </Box>
+        </Container>
+      </Box>
 
-        <Box className='donators'>
+      <Box className='donators'>
+        <Container>
           <Box className='donators__tile'>
             <Typography component='h5' variant='h5'>
               Donators
@@ -211,14 +219,81 @@ const Home = () => {
               </Box>
             </Grid>
           </Grid>
-        </Box>
+        </Container>
+      </Box>
 
-        <Box className='about-us'></Box>
+      <Box className='about-us'>
+        <Container>
+          <Grid container>
+            <Grid item xs={12} sm={12} md={12} lg={12} xl={4}>
+              <Paper className='about-us__paper'>
+                <Image
+                  className='about-us__image'
+                  src='https://images.pexels.com/photos/3932961/pexels-photo-3932961.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+                  alt='about-us__image'
+                />
+              </Paper>
+            </Grid>
 
-        <Box className='our-events'></Box>
-      </Container>
+            <Grid item xs={12} sm={12} md={12} lg={12} xl={8}>
+              <Box className='about-us__information'>
+                <Typography
+                  className='about-us__title'
+                  component='h6'
+                  variant='h6'
+                >
+                  About Us
+                </Typography>
+
+                <Typography className='about-us__content' component='p'>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum
+                  molestiae perspiciatis similique autem quibusdam praesentium,
+                  vero consequuntur officia assumenda nemo natus, animi quaerat
+                  quam obcaecati beatae a! Doloribus repellendus laboriosam
+                  maiores, voluptatem neque minima magnam nostrum. Minima
+                  necessitatibus earum quam.
+                </Typography>
+
+                <Button className='about-us__button'>read more</Button>
+              </Box>
+
+              <Box className='about-us__partners'>
+                <Typography className='about-us__title'>Partners</Typography>
+
+                <Box className='about-us__carousel'>
+                  <Grid container>
+                    <Grid item xs={12} sm={12} md={12} lg={12} xl={11}>
+                      <SwiperAboutUs className='about-us__swiper' />
+                    </Grid>
+
+                    <Grid item xs={12} sm={12} md={12} lg={12} xl={1}>
+                      <Box className='about-us__group-button'>
+                        <IconButton>
+                          <ArrowBackIosIcon />
+                        </IconButton>
+                        <IconButton>
+                          <ArrowForwardIosIcon />
+                        </IconButton>
+                      </Box>
+                    </Grid>
+                  </Grid>
+                </Box>
+              </Box>
+            </Grid>
+          </Grid>
+        </Container>
+      </Box>
+
+      <Box className='our-events'></Box>
     </div>
   )
 }
 
 export default Home
+
+/* Todos with new block:
+  
+  1. Set className better
+  2. Scss: Common variables - Style
+
+*/
