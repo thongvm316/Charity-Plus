@@ -4,12 +4,8 @@ import Box from '@material-ui/core/Box'
 import Divider from '@material-ui/core/Divider'
 import Paper from '@material-ui/core/Paper'
 import Grid from '@material-ui/core/Grid'
-import IconButton from '@material-ui/core/IconButton'
 import Button from 'components/CustomButton/CustomButton'
 import Typography from 'components/Typography/CustomTypography'
-
-import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos'
-import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos'
 
 import Container from 'components/CustommContainer/CustomContainer'
 import Image from 'components/Image/Image'
@@ -254,30 +250,19 @@ const Home = () => {
                   necessitatibus earum quam.
                 </Typography>
 
-                <Button className='about-us__button'>read more</Button>
+                <Button
+                  className='about-us__button'
+                  size='large'
+                  variant='contained'
+                >
+                  read more
+                </Button>
               </Box>
 
               <Box className='about-us__partners'>
                 <Typography className='about-us__title'>Partners</Typography>
 
-                <Box className='about-us__carousel'>
-                  <Grid container>
-                    <Grid item xs={12} sm={12} md={12} lg={12} xl={11}>
-                      <SwiperAboutUs className='about-us__swiper' />
-                    </Grid>
-
-                    <Grid item xs={12} sm={12} md={12} lg={12} xl={1}>
-                      <Box className='about-us__group-button'>
-                        <IconButton>
-                          <ArrowBackIosIcon />
-                        </IconButton>
-                        <IconButton>
-                          <ArrowForwardIosIcon />
-                        </IconButton>
-                      </Box>
-                    </Grid>
-                  </Grid>
-                </Box>
+                <SwiperAboutUs className='about-us__swiper' />
               </Box>
             </Grid>
           </Grid>
@@ -290,10 +275,3 @@ const Home = () => {
 }
 
 export default Home
-
-/* Todos with new block:
-  
-  1. Set className better
-  2. Scss: Common variables - Style
-
-*/
