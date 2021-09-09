@@ -269,9 +269,107 @@ const Home = () => {
         </Container>
       </Box>
 
-      <Box className='our-events'></Box>
+      <Box className='our-events'>
+        <Container>
+          <Grid container>
+            <Grid item xs={12} sm={12} md={12} lg={12} xl={6}>
+              <Typography
+                component='h5'
+                variant='h5'
+                className='our-events__main-title'
+              >
+                Our Events
+              </Typography>
+
+              <Box className='our-events__item'>
+                <Typography
+                  component='h6'
+                  variant='h6'
+                  className='our-events__title'
+                >
+                  Demo Event Heading
+                </Typography>
+
+                <Typography component='p' className='our-events__moment'>
+                  February, 10, 2016
+                </Typography>
+
+                <Typography component='p' className='our-events__content'>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy
+                </Typography>
+              </Box>
+
+              <Box className='our-events__item'>
+                <Typography
+                  component='h6'
+                  variant='h6'
+                  className='our-events__title'
+                >
+                  Demo Event Heading
+                </Typography>
+
+                <Typography component='p' className='our-events__moment'>
+                  February, 10, 2016
+                </Typography>
+
+                <Typography component='p' className='our-events__content'>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy
+                </Typography>
+              </Box>
+
+              <Box className='our-events__button'>
+                <Button>view full event</Button>
+              </Box>
+            </Grid>
+
+            <Grid item xs={12} sm={12} md={12} lg={12} xl={6}>
+              <Box className='our-events__heading'>
+                <Typography
+                  component='h6'
+                  variant='h6'
+                  className='our-events__title'
+                >
+                  Event Heading
+                </Typography>
+
+                <Typography component='p' className='our-events__content'>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has industry... standard
+                  dummy
+                </Typography>
+              </Box>
+
+              <Box className='our-events__list-images'>
+                <Image
+                  className='our-events__image-item'
+                  // src='https://images.pexels.com/photos/3553703/pexels-photo-3553703.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+                  alt='image-item'
+                />
+
+                <Image
+                  className='our-events__image-item'
+                  // src='https://images.pexels.com/photos/7186154/pexels-photo-7186154.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+                  alt='image-item'
+                />
+              </Box>
+            </Grid>
+          </Grid>
+        </Container>
+      </Box>
     </div>
   )
 }
 
 export default Home
+
+/* 
+  Section Our-Event
+  1. Layout
+  2. Block - Class Name
+  3. Html
+  4. Scss: variables
+*/

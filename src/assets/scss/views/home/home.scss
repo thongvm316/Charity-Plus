@@ -32,6 +32,25 @@ $fontSizeContentAboutUs: (
   'large': 14px,
 );
 
+$backgroundColorButtonSwiper: (
+  'previousButton': #8195ed,
+  'nextButton': #4e63bb,
+);
+
+/* Mixin */
+@mixin lineGreen($width, $height, $bottom, $left) {
+  &::after {
+    position: absolute;
+    content: '';
+    background-color: $greenColor;
+    width: $width;
+    height: $height;
+    bottom: $bottom;
+    left: $left;
+    @content;
+  }
+}
+
 /* Style */
 .home {
   /* Banner Section */
@@ -109,14 +128,7 @@ $fontSizeContentAboutUs: (
       font-size: 14px;
       color: #879094;
 
-      &::after {
-        position: absolute;
-        content: '';
-        background-color: $greenColor;
-        width: 22px;
-        height: 2px;
-        bottom: -12px;
-        left: 50%;
+      @include lineGreen(22px, 2px, -12px, 50%) {
         transform: translateX(-50%);
       }
     }
@@ -214,8 +226,8 @@ $fontSizeContentAboutUs: (
     margin-bottom: 35px;
 
     > div {
-      width: 134px;
-      height: 140px;
+      width: 120px;
+      height: 130px;
     }
   }
 
@@ -224,7 +236,7 @@ $fontSizeContentAboutUs: (
     justify-content: space-between;
 
     > div {
-      width: 134px;
+      width: 120px;
       text-align: left;
 
       h6 {
@@ -370,15 +382,7 @@ $fontSizeContentAboutUs: (
     font-family: $rufina !important;
     font-size: map-get($fontSizeTitleAboutUs, 'large') !important;
 
-    &::after {
-      position: absolute;
-      content: '';
-      bottom: -5px;
-      left: 0;
-      width: 22px;
-      height: 2px;
-      background-color: $greenColor;
-    }
+    @include lineGreen(22px, 2px, -5px, 0);
   }
 
   &__content {
@@ -393,6 +397,16 @@ $fontSizeContentAboutUs: (
   }
 
   &__partners {
+    .MuiGrid-container {
+      div:first-child {
+        padding-left: 0 !important;
+      }
+
+      div:last-child {
+        padding: 0 !important;
+      }
+    }
+
     .about-us__title {
       color: $backgroundWhite;
       margin-bottom: 28px !important;
@@ -413,7 +427,6 @@ $fontSizeContentAboutUs: (
       background: #fff;
       height: 103px;
 
-      /* Center slide text vertically */
       display: -webkit-box;
       display: -ms-flexbox;
       display: -webkit-flex;
@@ -440,7 +453,46 @@ $fontSizeContentAboutUs: (
     display: flex;
     height: 100%;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+
+    > div {
+      height: 45%;
+
+      button {
+        height: 100%;
+
+        .MuiButton-label {
+          color: #fff;
+        }
+      }
+
+      #previousButton {
+        background-color: map-get(
+          $backgroundColorButtonSwiper,
+          'previousButton'
+        );
+      }
+
+      #nextButton {
+        background-color: map-get($backgroundColorButtonSwiper, 'nextButton');
+      }
+    }
+  }
+}
+
+.our-events {
+  height: 703px;
+  display: flex;
+  align-items: center;
+
+  &__main-title {
+    position: relative;
+    margin-bottom: 58px !important;
+
+    font-size: 30px !important;
+    font-family: $rufina !important;
+
+    @include lineGreen(22px, 2px, -3px, 0);
   }
 }
