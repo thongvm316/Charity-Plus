@@ -272,7 +272,15 @@ const Home = () => {
       <Box className='our-events'>
         <Container>
           <Grid container>
-            <Grid item xs={12} sm={12} md={12} lg={12} xl={6}>
+            <Grid
+              item
+              xs={12}
+              sm={12}
+              md={12}
+              lg={12}
+              xl={6}
+              className='our-events__left'
+            >
               <Typography
                 component='h5'
                 variant='h5'
@@ -301,6 +309,8 @@ const Home = () => {
                 </Typography>
               </Box>
 
+              <Divider className='our-events__divider' />
+
               <Box className='our-events__item'>
                 <Typography
                   component='h6'
@@ -322,11 +332,21 @@ const Home = () => {
               </Box>
 
               <Box className='our-events__button'>
-                <Button>view full event</Button>
+                <Button size='large' variant='contained'>
+                  view full event
+                </Button>
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={12} md={12} lg={12} xl={6}>
+            <Grid
+              item
+              xs={12}
+              sm={12}
+              md={12}
+              lg={12}
+              xl={6}
+              className='our-events__right'
+            >
               <Box className='our-events__heading'>
                 <Typography
                   component='h6'
@@ -346,13 +366,13 @@ const Home = () => {
               <Box className='our-events__list-images'>
                 <Image
                   className='our-events__image-item'
-                  // src='https://images.pexels.com/photos/3553703/pexels-photo-3553703.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+                  src='https://images.pexels.com/photos/3553703/pexels-photo-3553703.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
                   alt='image-item'
                 />
 
                 <Image
                   className='our-events__image-item'
-                  // src='https://images.pexels.com/photos/7186154/pexels-photo-7186154.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+                  src='https://images.pexels.com/photos/1378849/pexels-photo-1378849.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
                   alt='image-item'
                 />
               </Box>
@@ -365,11 +385,3 @@ const Home = () => {
 }
 
 export default Home
-
-/* 
-  Section Our-Event
-  1. Layout
-  2. Block - Class Name
-  3. Html
-  4. Scss: variables
-*/

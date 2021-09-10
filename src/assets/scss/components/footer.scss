@@ -34,6 +34,16 @@ $footerBackgroundColor: #515350;
 
   &__contact {
     margin-top: 50px;
+
+    > div {
+      padding-left: 0 !important;
+    }
+  }
+
+  &__contact-detail {
+    > div {
+      padding-left: 0 !important;
+    }
   }
 
   &__title {
