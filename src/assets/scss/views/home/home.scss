@@ -1,6 +1,20 @@
 @import 'assets/scss/variables';
 @import 'assets/scss/responsive';
 
+/* common */
+@mixin lineGreen($width, $height, $bottom, $left) {
+  &::after {
+    position: absolute;
+    content: '';
+    background-color: $greenColor;
+    width: $width;
+    height: $height;
+    bottom: $bottom;
+    left: $left;
+    @content;
+  }
+}
+
 $blueColor: #687dd8;
 $whiteColor: #ffffff;
 $greenColor: #82c7a6;
@@ -8,7 +22,6 @@ $greenColor2: #9be9c0;
 $greenColor3: #e1fff1;
 $grayColor: #6f7a7f;
 
-/* common */
 $fontSizeSubTitle: (
   'small': 16px,
   'normal': 26px,
@@ -56,20 +69,6 @@ $ourEventsTitle: (
     background-image: url('assets/img/home/our-events-sticker.png');
     width: 63px;
     height: 61px;
-  }
-}
-
-/* Mixin */
-@mixin lineGreen($width, $height, $bottom, $left) {
-  &::after {
-    position: absolute;
-    content: '';
-    background-color: $greenColor;
-    width: $width;
-    height: $height;
-    bottom: $bottom;
-    left: $left;
-    @content;
   }
 }
 
@@ -587,5 +586,158 @@ $ourEventsTitle: (
     height: 162px;
 
     @include ourEventsSticker;
+  }
+}
+
+/* Responsive */
+.home {
+  &__cause-list {
+    @include breakpoint-down('sm') {
+      height: auto;
+    }
+  }
+}
+
+.donators {
+  @include screen('md') {
+    &__information {
+      padding: 40px;
+    }
+
+    &__featured-images {
+      > div {
+        width: 90px;
+        height: 100px;
+      }
+    }
+
+    &__featured-name {
+      > div {
+        width: 90px;
+
+        h6 {
+          font-size: 11px;
+        }
+
+        p {
+          font-size: 10px;
+        }
+      }
+    }
+
+    &__now-raised {
+      height: 120px;
+      padding: 30px 20px;
+    }
+
+    &__now-raised-detail {
+      p {
+        font-size: 12px !important;
+
+        span {
+          font-size: 18px;
+        }
+      }
+    }
+
+    &__now-end-time {
+      h6 {
+        font-size: 12px;
+      }
+    }
+
+    &__now-end-time-detail {
+      p {
+        width: 35px;
+        height: 35px;
+
+        span:first-child {
+          font-size: 13px;
+        }
+
+        span:last-child {
+          font-size: 9px;
+        }
+      }
+    }
+  }
+
+  @include breakpoint-down('sm') {
+    height: 800px;
+
+    &__divider {
+      display: none;
+    }
+
+    &__information {
+      height: auto;
+      padding: 30px;
+    }
+
+    &__featured {
+      margin-bottom: 2rem !important;
+    }
+
+    &__featured-images {
+      > div {
+        width: 70px;
+        height: 90px;
+      }
+    }
+
+    &__featured-name {
+      > div {
+        width: 80px;
+
+        h6 {
+          font-size: 10px;
+        }
+
+        p {
+          font-size: 8px;
+        }
+      }
+    }
+
+    &__now-raised {
+      height: 100px;
+      padding: 30px 20px;
+    }
+
+    &__now-raised-detail {
+      p {
+        font-size: 10px !important;
+
+        span {
+          font-size: 13px;
+        }
+      }
+    }
+
+    &__now-end-time {
+      h6 {
+        font-size: 10px;
+      }
+
+      button {
+        font-size: 9px;
+        height: 70%;
+      }
+    }
+
+    &__now-end-time-detail {
+      p {
+        width: 30px;
+        height: 30px;
+
+        span:first-child {
+          font-size: 11px;
+        }
+
+        span:last-child {
+          font-size: 7px;
+        }
+      }
+    }
   }
 }

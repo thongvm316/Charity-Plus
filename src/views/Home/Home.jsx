@@ -53,7 +53,7 @@ const Home = () => {
           </Box>
 
           <Grid container className='home__cause-list-options'>
-            <Grid item xs={12} sm={12} md={12} lg={12} xl={4}>
+            <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
               <Card
                 className='home__cause-list-card'
                 header='Food'
@@ -63,7 +63,7 @@ const Home = () => {
                   Lorem Ipsum.'
               />
             </Grid>
-            <Grid item xs={12} sm={12} md={12} lg={12} xl={4}>
+            <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
               <Card
                 className='home__cause-list-card'
                 header='Health'
@@ -73,7 +73,7 @@ const Home = () => {
                   Lorem Ipsum.'
               />
             </Grid>
-            <Grid item xs={12} sm={12} md={12} lg={12} xl={4}>
+            <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
               <Card
                 className='home__cause-list-card'
                 header='Water'
@@ -104,8 +104,8 @@ const Home = () => {
               className='donators__featured'
               xs={12}
               sm={12}
-              md={12}
-              lg={12}
+              md={5}
+              lg={5}
               xl={5}
             >
               <Typography component='h6' className='donators__featured-title'>
@@ -154,8 +154,8 @@ const Home = () => {
               className='donators__divider'
               xs={12}
               sm={12}
-              md={12}
-              lg={12}
+              md={2}
+              lg={2}
               xl={2}
             >
               <Divider flexItem orientation='vertical' />
@@ -166,8 +166,8 @@ const Home = () => {
               className='donators__now'
               xs={12}
               sm={12}
-              md={12}
-              lg={12}
+              md={5}
+              lg={5}
               xl={5}
             >
               <Typography component='h6' className='donators__now-title'>
