@@ -39,7 +39,7 @@ const SwiperComponent = () => {
             <CardActionArea className='swiper-home__action-area'>
               <CardMedia
                 className='swiper-home__card-media'
-                image='https://images.pexels.com/photos/3861964/pexels-photo-3861964.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260'
+                image='https://images.pexels.com/photos/2832055/pexels-photo-2832055.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
                 title='Contemplative Reptile'
               />
               <CardContent className='swiper-home__card-content'>

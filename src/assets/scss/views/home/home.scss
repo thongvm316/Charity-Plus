@@ -582,7 +582,7 @@ $ourEventsTitle: (
 
   &__image-item {
     position: relative;
-    width: 250px;
+    flex-basis: 250px;
     height: 162px;
 
     @include ourEventsSticker;
@@ -738,6 +738,74 @@ $ourEventsTitle: (
           font-size: 7px;
         }
       }
+    }
+  }
+}
+
+.about-us {
+  @include screen('md') {
+    &__paper {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  @include breakpoint-down('sm') {
+    height: auto;
+    padding: 3rem 0;
+
+    &::after {
+      height: 250px;
+    }
+
+    &__paper {
+      width: 100%;
+      height: 500px;
+
+      margin-bottom: 1rem;
+    }
+
+    &__button {
+      margin-bottom: 50px !important;
+    }
+  }
+}
+
+.our-events {
+  @include screen('md') {
+    &__image-item {
+      flex-basis: 45%;
+    }
+  }
+
+  @include screen('sm') {
+    height: auto;
+    padding: 2rem 0;
+
+    &__left {
+      margin-bottom: 2rem !important;
+    }
+
+    &__image-item {
+      flex-basis: 45%;
+    }
+  }
+
+  @include screen('xs') {
+    height: auto;
+    padding: 2rem 0;
+
+    &__left {
+      margin-bottom: 2rem !important;
+    }
+
+    &__image-item {
+      flex-basis: 45%;
+      height: 130px;
+    }
+
+    &__heading {
+      height: auto;
     }
   }
 }

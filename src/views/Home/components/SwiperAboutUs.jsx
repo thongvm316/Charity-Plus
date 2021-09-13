@@ -21,7 +21,7 @@ const SwiperAboutUs = (props) => {
   return (
     <>
       <Grid container>
-        <Grid item xs={12} sm={12} md={12} lg={12} xl={11}>
+        <Grid item xs={10} sm={11} md={11} lg={11} xl={11}>
           <Swiper
             ref={swiperRef}
             slidesPerView={4}
@@ -31,6 +31,16 @@ const SwiperAboutUs = (props) => {
               disableOnInteraction: false,
             }}
             loop={true}
+            breakpoints={{
+              320: {
+                slidesPerView: 2,
+                spaceBetween: 10,
+              },
+              600: {
+                slidesPerView: 4,
+                spaceBetween: 10,
+              },
+            }}
             {...rest}
           >
             <SwiperSlide>
@@ -90,7 +100,7 @@ const SwiperAboutUs = (props) => {
           </Swiper>
         </Grid>
 
-        <Grid item xs={12} sm={12} md={12} lg={12} xl={1}>
+        <Grid item xs={2} sm={1} md={1} lg={1} xl={1}>
           <Box className='about-us__swiper-navigation'>
             <div>
               <Button

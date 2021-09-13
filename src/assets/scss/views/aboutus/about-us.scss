@@ -1,0 +1,25 @@
+@import 'assets/scss/variables';
+@import 'assets/scss/responsive';
+
+/* Common variables */
+@mixin lineGreen($width, $height, $bottom, $left) {
+  &::after {
+    position: absolute;
+    content: '';
+    background-color: $greenColor;
+    width: $width;
+    height: $height;
+    bottom: $bottom;
+    left: $left;
+    @content;
+  }
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 310px;
+
+  background: url('assets/img/aboutus/banner.jpg') center no-repeat;
+  background-size: cover;
+}

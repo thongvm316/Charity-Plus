@@ -6,10 +6,12 @@ const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin'
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const LodashModuleReplacementPlugin = require('lodash-webpack-plugin')
+const MomentLocalesPlugin = require('moment-locales-webpack-plugin')
 
 const plugins = [
   new CleanWebpackPlugin(),
   new LodashModuleReplacementPlugin(),
+  new MomentLocalesPlugin(),
   new HtmlWebpackPlugin({
     template: './src/index.html',
   }),

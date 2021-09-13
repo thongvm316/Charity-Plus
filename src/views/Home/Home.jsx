@@ -221,7 +221,7 @@ const Home = () => {
       <Box className='about-us'>
         <Container>
           <Grid container>
-            <Grid item xs={12} sm={12} md={12} lg={12} xl={4}>
+            <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
               <Paper className='about-us__paper'>
                 <Image
                   className='about-us__image'
@@ -231,7 +231,7 @@ const Home = () => {
               </Paper>
             </Grid>
 
-            <Grid item xs={12} sm={12} md={12} lg={12} xl={8}>
+            <Grid item xs={12} sm={12} md={8} lg={8} xl={8}>
               <Box className='about-us__information'>
                 <Typography
                   className='about-us__title'
@@ -261,7 +261,6 @@ const Home = () => {
 
               <Box className='about-us__partners'>
                 <Typography className='about-us__title'>Partners</Typography>
-
                 <SwiperAboutUs className='about-us__swiper' />
               </Box>
             </Grid>
@@ -276,8 +275,8 @@ const Home = () => {
               item
               xs={12}
               sm={12}
-              md={12}
-              lg={12}
+              md={6}
+              lg={6}
               xl={6}
               className='our-events__left'
             >
@@ -342,8 +341,8 @@ const Home = () => {
               item
               xs={12}
               sm={12}
-              md={12}
-              lg={12}
+              md={6}
+              lg={6}
               xl={6}
               className='our-events__right'
             >
