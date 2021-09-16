@@ -1,12 +1,10 @@
 import React from 'react'
 
 import { Swiper, SwiperSlide } from 'swiper/react'
-import SwiperCore, { Pagination } from 'swiper'
-SwiperCore.use([Pagination])
+import SwiperCore, { Autoplay, Pagination } from 'swiper'
+SwiperCore.use([Autoplay, Pagination])
 
 import Box from '@material-ui/core/Box'
-import Divider from '@material-ui/core/Divider'
-import Paper from '@material-ui/core/Paper'
 import Grid from '@material-ui/core/Grid'
 import Button from 'components/CustomButton/CustomButton'
 import Typography from 'components/Typography/CustomTypography'
@@ -90,7 +88,18 @@ const AboutUs = () => {
               pagination={{
                 clickable: true,
               }}
-              className='mySwiper'
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
+              loop={true}
+              pagination={{
+                clickable: true,
+                el: '.volunteer__custom-pagination',
+                renderBullet: function (index, className) {
+                  return `<span class=${className}><i class="far fa-circle"></i></span>`
+                },
+              }}
             >
               <SwiperSlide>
                 <img
@@ -147,7 +156,8 @@ const AboutUs = () => {
                 />
               </SwiperSlide>
             </Swiper>
-            <p>pagination</p>
+
+            <Box className='volunteer__custom-pagination'></Box>
           </Box>
         </Container>
       </Box>
