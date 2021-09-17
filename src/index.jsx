@@ -1,5 +1,6 @@
 import React from 'react'
 import { render } from 'react-dom'
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -12,8 +13,6 @@ import MainLayout from 'layout/MainLayout'
 import './index.scss'
 
 const App = () => {
-  console.log('object')
-
   return (
     <Router>
       <Switch>
