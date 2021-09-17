@@ -12,8 +12,6 @@ import MainLayout from 'layout/MainLayout'
 import './index.scss'
 
 const App = () => {
-  console.log('object')
-
   return (
     <Router>
       <Switch>
