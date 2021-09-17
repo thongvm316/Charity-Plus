@@ -166,3 +166,42 @@ $fontSizeVolunteerContent: (
     }
   }
 }
+
+.statistical {
+  @mixin verticalDivider() {
+    &::after {
+      position: absolute;
+      content: '';
+      width: 1px;
+      height: 300px;
+      background-color: $colorWhite;
+      right: 0;
+      top: 0;
+    }
+  }
+
+  height: 300px;
+  background-color: $greenColor;
+
+  &__container {
+    height: 100%;
+  }
+
+  &__grid-container {
+    height: 100%;
+  }
+
+  &__grid-item {
+    position: relative;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+
+  &__grid-item:nth-child(-n + 3) {
+    @include verticalDivider;
+  }
+}

@@ -6,8 +6,11 @@ SwiperCore.use([Autoplay, Pagination])
 
 import Box from '@material-ui/core/Box'
 import Grid from '@material-ui/core/Grid'
+import IconButton from '@material-ui/core/IconButton'
 import Button from 'components/CustomButton/CustomButton'
 import Typography from 'components/Typography/CustomTypography'
+import Divider from '@material-ui/core/Divider'
+import Icon from '@material-ui/core/Icon'
 
 import Container from 'components/CustommContainer/CustomContainer'
 import Image from 'components/Image/Image'
@@ -162,7 +165,99 @@ const AboutUs = () => {
         </Container>
       </Box>
 
-      <Box className='statistical'></Box>
+      <Box className='statistical'>
+        <Container className='statistical__container'>
+          <Grid container className='statistical__grid-container'>
+            <Grid
+              item
+              xs={12}
+              sm={12}
+              md={12}
+              lg={12}
+              xl={3}
+              className='statistical__grid-item'
+            >
+              <Box>
+                <IconButton className='statistical__icon'>
+                  <Icon className='far fa-thumbs-up' />
+                </IconButton>
+              </Box>
+              <Typography component='p' className='statistical__number'>
+                555
+              </Typography>
+              <Typography component='p' className='statistical__text'>
+                SUCCESSFUL PROJECTS
+              </Typography>
+            </Grid>
+
+            <Grid
+              item
+              xs={12}
+              sm={12}
+              md={12}
+              lg={12}
+              xl={3}
+              className='statistical__grid-item'
+            >
+              <Box>
+                <IconButton className='statistical__icon'>
+                  <Icon className='fas fa-award' />
+                </IconButton>
+              </Box>
+              <Typography component='p' className='statistical__number'>
+                23
+              </Typography>
+              <Typography component='p' className='statistical__text'>
+                awards winner
+              </Typography>
+            </Grid>
+
+            <Grid
+              item
+              xs={12}
+              sm={12}
+              md={12}
+              lg={12}
+              xl={3}
+              className='statistical__grid-item'
+            >
+              <Box>
+                <IconButton className='statistical__icon'>
+                  <Icon className='fas fa-user-friends' />
+                </IconButton>
+              </Box>
+              <Typography component='p' className='statistical__number'>
+                320
+              </Typography>
+              <Typography component='p' className='statistical__text'>
+                TOTAL VOLUNTEERS
+              </Typography>
+            </Grid>
+
+            <Grid
+              item
+              xs={12}
+              sm={12}
+              md={12}
+              lg={12}
+              xl={3}
+              className='statistical__grid-item'
+            >
+              <Box>
+                <IconButton className='statistical__icon'>
+                  <Icon className='fas fa-star-and-crescent' />
+                </IconButton>
+              </Box>
+              <Typography component='p' className='statistical__number'>
+                89000$
+              </Typography>
+              <Typography component='p' className='statistical__text'>
+                TOTAL AMOUNT RAISED
+              </Typography>
+            </Grid>
+          </Grid>
+        </Container>
+      </Box>
 
       <Box className='volunteer-detail'></Box>
 
