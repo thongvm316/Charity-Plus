@@ -271,8 +271,11 @@ const AboutUs = () => {
 
       <Box className='volunteer-detail'>
         <Container className='volunteer-detail__container'>
-          <Grid container className='volunteer-detail__item'>
-            <Grid item xs={12} sm={12} md={12} lg={12} xl={4}>
+          <Grid
+            container
+            className='volunteer-detail__item volunteer-detail__item--custom-block-one'
+          >
+            <Grid item xs={12} sm={12} md={12} lg={12} xl={5}>
               <Image
                 src={VolunteerDetail1}
                 className='volunteer-detail__image-one'
@@ -280,12 +283,10 @@ const AboutUs = () => {
               />
             </Grid>
 
-            <Grid item xs={12} sm={12} md={12} lg={12} xl={8}>
-              <Box className='volunteer-detail__info'>
-                <Box className='volunteer-detail__icon'>
-                  <IconButton>
-                    <Icon className='far fa-smile'></Icon>
-                  </IconButton>
+            <Grid item xs={12} sm={12} md={12} lg={12} xl={7}>
+              <Box className='volunteer-detail__info volunteer-detail__info--custom-margin'>
+                <Box className='volunteer-detail__icon-block-one'>
+                  <Icon className='far fa-smile'></Icon>
                 </Box>
 
                 <Typography
@@ -306,10 +307,8 @@ const AboutUs = () => {
               </Box>
 
               <Box className='volunteer-detail__info'>
-                <Box className='volunteer-detail__icon'>
-                  <IconButton>
-                    <Icon className='far fa-smile'></Icon>
-                  </IconButton>
+                <Box className='volunteer-detail__icon-block-one'>
+                  <Icon className='far fa-heart'></Icon>
                 </Box>
 
                 <Typography
@@ -395,7 +394,7 @@ const AboutUs = () => {
                   <CardActionArea className='volunteer-detail__card-area'>
                     <CardMedia
                       className='volunteer-detail__card-media'
-                      image={VolunteerCard1}
+                      image={VolunteerCard2}
                       title='Contemplative Reptile'
                     />
                     <CardContent className='volunteer-detail__card-content'>
@@ -442,7 +441,7 @@ const AboutUs = () => {
                   <CardActionArea className='volunteer-detail__card-area'>
                     <CardMedia
                       className='volunteer-detail__card-media'
-                      image={VolunteerCard1}
+                      image={VolunteerCard3}
                       title='Contemplative Reptile'
                     />
                     <CardContent className='volunteer-detail__card-content'>
@@ -489,7 +488,7 @@ const AboutUs = () => {
                   <CardActionArea className='volunteer-detail__card-area'>
                     <CardMedia
                       className='volunteer-detail__card-media'
-                      image={VolunteerCard1}
+                      image={VolunteerCard4}
                       title='Contemplative Reptile'
                     />
                     <CardContent className='volunteer-detail__card-content'>
