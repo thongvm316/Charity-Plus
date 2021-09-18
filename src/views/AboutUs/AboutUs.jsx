@@ -5,18 +5,28 @@ import SwiperCore, { Autoplay, Pagination } from 'swiper'
 SwiperCore.use([Autoplay, Pagination])
 
 import Box from '@material-ui/core/Box'
+import Divider from '@material-ui/core/Divider'
 import Grid from '@material-ui/core/Grid'
 import IconButton from '@material-ui/core/IconButton'
 import Button from 'components/CustomButton/CustomButton'
 import Typography from 'components/Typography/CustomTypography'
-import Divider from '@material-ui/core/Divider'
 import Icon from '@material-ui/core/Icon'
+import Card from '@material-ui/core/Card'
+import CardActionArea from '@material-ui/core/CardActionArea'
+import CardActions from '@material-ui/core/CardActions'
+import CardContent from '@material-ui/core/CardContent'
+import CardMedia from '@material-ui/core/CardMedia'
 
 import Container from 'components/CustommContainer/CustomContainer'
 import Image from 'components/Image/Image'
 
 import ImageTitle from 'assets/img/aboutus/image-title.png'
 import VolunteerImageOne from 'assets/img/aboutus/volunteer-image1.jpg'
+import VolunteerDetail1 from 'assets/img/aboutus/volunteer-detail1.jpg'
+import VolunteerCard1 from 'assets/img/aboutus/volunteer-detail-card1.jpg'
+import VolunteerCard2 from 'assets/img/aboutus/volunteer-detail-card1.jpg'
+import VolunteerCard3 from 'assets/img/aboutus/volunteer-detail-card1.jpg'
+import VolunteerCard4 from 'assets/img/aboutus/volunteer-detail-card1.jpg'
 
 import 'swiper/css'
 import 'swiper/css/pagination'
@@ -223,7 +233,7 @@ const AboutUs = () => {
             >
               <Box>
                 <IconButton className='statistical__icon'>
-                  <Icon className='fas fa-user-friends' />
+                  <Icon className='far fa-user' />
                 </IconButton>
               </Box>
               <Typography component='p' className='statistical__number'>
@@ -259,7 +269,270 @@ const AboutUs = () => {
         </Container>
       </Box>
 
-      <Box className='volunteer-detail'></Box>
+      <Box className='volunteer-detail'>
+        <Container className='volunteer-detail__container'>
+          <Grid
+            container
+            className='volunteer-detail__item volunteer-detail__item--custom-block-one'
+          >
+            <Grid item xs={12} sm={12} md={12} lg={12} xl={5}>
+              <Image
+                src={VolunteerDetail1}
+                className='volunteer-detail__image-one'
+                alt='volunteer-detail'
+              />
+            </Grid>
+
+            <Grid item xs={12} sm={12} md={12} lg={12} xl={7}>
+              <Box className='volunteer-detail__info volunteer-detail__info--custom-margin'>
+                <Box className='volunteer-detail__icon-block-one'>
+                  <Icon className='far fa-smile'></Icon>
+                </Box>
+
+                <Typography
+                  component='h6'
+                  variant='h6'
+                  className='volunteer-detail__item-title'
+                >
+                  Our Vision
+                </Typography>
+
+                <Typography component='p' className='volunteer-detail__content'>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled it to make a type
+                  specimen book.
+                </Typography>
+              </Box>
+
+              <Box className='volunteer-detail__info'>
+                <Box className='volunteer-detail__icon-block-one'>
+                  <Icon className='far fa-heart'></Icon>
+                </Box>
+
+                <Typography
+                  component='h6'
+                  variant='h6'
+                  className='volunteer-detail__item-title'
+                >
+                  Our Vision
+                </Typography>
+
+                <Typography component='p' className='volunteer-detail__content'>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled it to make a type
+                  specimen book.
+                </Typography>
+              </Box>
+            </Grid>
+          </Grid>
+
+          <Divider className='volunteer-detail__divider' />
+
+          <Box className='volunteer-detail__item'>
+            <Typography
+              component='h5'
+              variant='h5'
+              className='volunteer-detail__title'
+            >
+              Our Volunteers
+            </Typography>
+
+            <Grid container className='volunteer-detail__grid-container'>
+              <Grid item xs={12} sm={12} md={12} lg={12} xl={3}>
+                <Card className='volunteer-detail__card'>
+                  <CardActionArea className='volunteer-detail__card-area'>
+                    <CardMedia
+                      className='volunteer-detail__card-media'
+                      image={VolunteerCard1}
+                      title='Contemplative Reptile'
+                    />
+                    <CardContent className='volunteer-detail__card-content'>
+                      <Typography
+                        gutterBottom
+                        variant='h5'
+                        component='h2'
+                        className='volunteer-detail__card-title'
+                      >
+                        Lizard
+                      </Typography>
+                      <Typography
+                        variant='body2'
+                        component='p'
+                        className='volunteer-detail__card-content-detail'
+                      >
+                        Lizards are a widespread group of squamate reptiles,
+                        with over 6,000 species, ranging across all continents
+                        except Antarctica
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                  <CardActions className='volunteer-detail__card-actions'>
+                    <Button
+                      size='small'
+                      color='primary'
+                      className='volunteer-detail__card-button'
+                    >
+                      Share
+                    </Button>
+                    <Button
+                      size='small'
+                      color='primary'
+                      className='volunteer-detail__card-button'
+                    >
+                      Learn More
+                    </Button>
+                  </CardActions>
+                </Card>
+              </Grid>
+
+              <Grid item xs={12} sm={12} md={12} lg={12} xl={3}>
+                <Card className='volunteer-detail__card'>
+                  <CardActionArea className='volunteer-detail__card-area'>
+                    <CardMedia
+                      className='volunteer-detail__card-media'
+                      image={VolunteerCard2}
+                      title='Contemplative Reptile'
+                    />
+                    <CardContent className='volunteer-detail__card-content'>
+                      <Typography
+                        gutterBottom
+                        variant='h5'
+                        component='h2'
+                        className='volunteer-detail__card-title'
+                      >
+                        Lizard
+                      </Typography>
+                      <Typography
+                        variant='body2'
+                        component='p'
+                        className='volunteer-detail__card-content-detail'
+                      >
+                        Lizards are a widespread group of squamate reptiles,
+                        with over 6,000 species, ranging across all continents
+                        except Antarctica
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                  <CardActions className='volunteer-detail__card-actions'>
+                    <Button
+                      size='small'
+                      color='primary'
+                      className='volunteer-detail__card-button'
+                    >
+                      Share
+                    </Button>
+                    <Button
+                      size='small'
+                      color='primary'
+                      className='volunteer-detail__card-button'
+                    >
+                      Learn More
+                    </Button>
+                  </CardActions>
+                </Card>
+              </Grid>
+
+              <Grid item xs={12} sm={12} md={12} lg={12} xl={3}>
+                <Card className='volunteer-detail__card'>
+                  <CardActionArea className='volunteer-detail__card-area'>
+                    <CardMedia
+                      className='volunteer-detail__card-media'
+                      image={VolunteerCard3}
+                      title='Contemplative Reptile'
+                    />
+                    <CardContent className='volunteer-detail__card-content'>
+                      <Typography
+                        gutterBottom
+                        variant='h5'
+                        component='h2'
+                        className='volunteer-detail__card-title'
+                      >
+                        Lizard
+                      </Typography>
+                      <Typography
+                        variant='body2'
+                        component='p'
+                        className='volunteer-detail__card-content-detail'
+                      >
+                        Lizards are a widespread group of squamate reptiles,
+                        with over 6,000 species, ranging across all continents
+                        except Antarctica
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                  <CardActions className='volunteer-detail__card-actions'>
+                    <Button
+                      size='small'
+                      color='primary'
+                      className='volunteer-detail__card-button'
+                    >
+                      Share
+                    </Button>
+                    <Button
+                      size='small'
+                      color='primary'
+                      className='volunteer-detail__card-button'
+                    >
+                      Learn More
+                    </Button>
+                  </CardActions>
+                </Card>
+              </Grid>
+
+              <Grid item xs={12} sm={12} md={12} lg={12} xl={3}>
+                <Card className='volunteer-detail__card'>
+                  <CardActionArea className='volunteer-detail__card-area'>
+                    <CardMedia
+                      className='volunteer-detail__card-media'
+                      image={VolunteerCard4}
+                      title='Contemplative Reptile'
+                    />
+                    <CardContent className='volunteer-detail__card-content'>
+                      <Typography
+                        gutterBottom
+                        variant='h5'
+                        component='h2'
+                        className='volunteer-detail__card-title'
+                      >
+                        Lizard
+                      </Typography>
+                      <Typography
+                        variant='body2'
+                        component='p'
+                        className='volunteer-detail__card-content-detail'
+                      >
+                        Lizards are a widespread group of squamate reptiles,
+                        with over 6,000 species, ranging across all continents
+                        except Antarctica
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                  <CardActions className='volunteer-detail__card-actions'>
+                    <Button
+                      size='small'
+                      color='primary'
+                      className='volunteer-detail__card-button'
+                    >
+                      Share
+                    </Button>
+                    <Button
+                      size='small'
+                      color='primary'
+                      className='volunteer-detail__card-button'
+                    >
+                      Learn More
+                    </Button>
+                  </CardActions>
+                </Card>
+              </Grid>
+            </Grid>
+          </Box>
+        </Container>
+      </Box>
 
       <Box className='our-partners'></Box>
     </>
