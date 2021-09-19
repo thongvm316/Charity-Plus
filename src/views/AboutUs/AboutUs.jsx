@@ -13,7 +13,6 @@ import Typography from 'components/Typography/CustomTypography'
 import Icon from '@material-ui/core/Icon'
 import Card from '@material-ui/core/Card'
 import CardActionArea from '@material-ui/core/CardActionArea'
-import CardActions from '@material-ui/core/CardActions'
 import CardContent from '@material-ui/core/CardContent'
 import CardMedia from '@material-ui/core/CardMedia'
 
@@ -24,9 +23,9 @@ import ImageTitle from 'assets/img/aboutus/image-title.png'
 import VolunteerImageOne from 'assets/img/aboutus/volunteer-image1.jpg'
 import VolunteerDetail1 from 'assets/img/aboutus/volunteer-detail1.jpg'
 import VolunteerCard1 from 'assets/img/aboutus/volunteer-detail-card1.jpg'
-import VolunteerCard2 from 'assets/img/aboutus/volunteer-detail-card1.jpg'
-import VolunteerCard3 from 'assets/img/aboutus/volunteer-detail-card1.jpg'
-import VolunteerCard4 from 'assets/img/aboutus/volunteer-detail-card1.jpg'
+import VolunteerCard2 from 'assets/img/aboutus/volunteer-detail-card2.jpg'
+import VolunteerCard3 from 'assets/img/aboutus/volunteer-detail-card3.jpg'
+import VolunteerCard4 from 'assets/img/aboutus/volunteer-detail-card4.jpg'
 
 import 'swiper/css'
 import 'swiper/css/pagination'
@@ -350,6 +349,23 @@ const AboutUs = () => {
                       image={VolunteerCard1}
                       title='Contemplative Reptile'
                     />
+                    <Box className='volunteer-detail__card-icons'>
+                      <IconButton>
+                        <Icon
+                          className='fab fa-facebook-f'
+                          fontSize='small'
+                        ></Icon>
+                      </IconButton>
+                      <IconButton>
+                        <Icon
+                          className='fab fa-twitter'
+                          fontSize='small'
+                        ></Icon>
+                      </IconButton>
+                      <IconButton>
+                        <Icon className='fab fa-google' fontSize='small'></Icon>
+                      </IconButton>
+                    </Box>
                     <CardContent className='volunteer-detail__card-content'>
                       <Typography
                         gutterBottom
@@ -357,7 +373,7 @@ const AboutUs = () => {
                         component='h2'
                         className='volunteer-detail__card-title'
                       >
-                        Lizard
+                        Volunteer name
                       </Typography>
                       <Typography
                         variant='body2'
@@ -370,22 +386,6 @@ const AboutUs = () => {
                       </Typography>
                     </CardContent>
                   </CardActionArea>
-                  <CardActions className='volunteer-detail__card-actions'>
-                    <Button
-                      size='small'
-                      color='primary'
-                      className='volunteer-detail__card-button'
-                    >
-                      Share
-                    </Button>
-                    <Button
-                      size='small'
-                      color='primary'
-                      className='volunteer-detail__card-button'
-                    >
-                      Learn More
-                    </Button>
-                  </CardActions>
                 </Card>
               </Grid>
 
@@ -397,6 +397,23 @@ const AboutUs = () => {
                       image={VolunteerCard2}
                       title='Contemplative Reptile'
                     />
+                    <Box className='volunteer-detail__card-icons'>
+                      <IconButton>
+                        <Icon
+                          className='fab fa-facebook-f'
+                          fontSize='small'
+                        ></Icon>
+                      </IconButton>
+                      <IconButton>
+                        <Icon
+                          className='fab fa-twitter'
+                          fontSize='small'
+                        ></Icon>
+                      </IconButton>
+                      <IconButton>
+                        <Icon className='fab fa-google' fontSize='small'></Icon>
+                      </IconButton>
+                    </Box>
                     <CardContent className='volunteer-detail__card-content'>
                       <Typography
                         gutterBottom
@@ -404,7 +421,7 @@ const AboutUs = () => {
                         component='h2'
                         className='volunteer-detail__card-title'
                       >
-                        Lizard
+                        Volunteer name
                       </Typography>
                       <Typography
                         variant='body2'
@@ -417,22 +434,6 @@ const AboutUs = () => {
                       </Typography>
                     </CardContent>
                   </CardActionArea>
-                  <CardActions className='volunteer-detail__card-actions'>
-                    <Button
-                      size='small'
-                      color='primary'
-                      className='volunteer-detail__card-button'
-                    >
-                      Share
-                    </Button>
-                    <Button
-                      size='small'
-                      color='primary'
-                      className='volunteer-detail__card-button'
-                    >
-                      Learn More
-                    </Button>
-                  </CardActions>
                 </Card>
               </Grid>
 
@@ -444,6 +445,23 @@ const AboutUs = () => {
                       image={VolunteerCard3}
                       title='Contemplative Reptile'
                     />
+                    <Box className='volunteer-detail__card-icons'>
+                      <IconButton>
+                        <Icon
+                          className='fab fa-facebook-f'
+                          fontSize='small'
+                        ></Icon>
+                      </IconButton>
+                      <IconButton>
+                        <Icon
+                          className='fab fa-twitter'
+                          fontSize='small'
+                        ></Icon>
+                      </IconButton>
+                      <IconButton>
+                        <Icon className='fab fa-google' fontSize='small'></Icon>
+                      </IconButton>
+                    </Box>
                     <CardContent className='volunteer-detail__card-content'>
                       <Typography
                         gutterBottom
@@ -451,7 +469,7 @@ const AboutUs = () => {
                         component='h2'
                         className='volunteer-detail__card-title'
                       >
-                        Lizard
+                        Volunteer name
                       </Typography>
                       <Typography
                         variant='body2'
@@ -464,22 +482,6 @@ const AboutUs = () => {
                       </Typography>
                     </CardContent>
                   </CardActionArea>
-                  <CardActions className='volunteer-detail__card-actions'>
-                    <Button
-                      size='small'
-                      color='primary'
-                      className='volunteer-detail__card-button'
-                    >
-                      Share
-                    </Button>
-                    <Button
-                      size='small'
-                      color='primary'
-                      className='volunteer-detail__card-button'
-                    >
-                      Learn More
-                    </Button>
-                  </CardActions>
                 </Card>
               </Grid>
 
@@ -491,6 +493,23 @@ const AboutUs = () => {
                       image={VolunteerCard4}
                       title='Contemplative Reptile'
                     />
+                    <Box className='volunteer-detail__card-icons'>
+                      <IconButton>
+                        <Icon
+                          className='fab fa-facebook-f'
+                          fontSize='small'
+                        ></Icon>
+                      </IconButton>
+                      <IconButton>
+                        <Icon
+                          className='fab fa-twitter'
+                          fontSize='small'
+                        ></Icon>
+                      </IconButton>
+                      <IconButton>
+                        <Icon className='fab fa-google' fontSize='small'></Icon>
+                      </IconButton>
+                    </Box>
                     <CardContent className='volunteer-detail__card-content'>
                       <Typography
                         gutterBottom
@@ -498,7 +517,7 @@ const AboutUs = () => {
                         component='h2'
                         className='volunteer-detail__card-title'
                       >
-                        Lizard
+                        Volunteer name
                       </Typography>
                       <Typography
                         variant='body2'
@@ -511,22 +530,6 @@ const AboutUs = () => {
                       </Typography>
                     </CardContent>
                   </CardActionArea>
-                  <CardActions className='volunteer-detail__card-actions'>
-                    <Button
-                      size='small'
-                      color='primary'
-                      className='volunteer-detail__card-button'
-                    >
-                      Share
-                    </Button>
-                    <Button
-                      size='small'
-                      color='primary'
-                      className='volunteer-detail__card-button'
-                    >
-                      Learn More
-                    </Button>
-                  </CardActions>
                 </Card>
               </Grid>
             </Grid>
@@ -534,7 +537,95 @@ const AboutUs = () => {
         </Container>
       </Box>
 
-      <Box className='our-partners'></Box>
+      <Box className='our-partners'>
+        <Container className='our-partners__container'>
+          <Typography
+            className='our-partners__main-title'
+            variant='h5'
+            component='h5'
+          >
+            Our Partners
+          </Typography>
+
+          <Box className='our-partners__swiper'>
+            <Swiper
+              slidesPerView={6}
+              spaceBetween={20}
+              pagination={{
+                clickable: true,
+              }}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
+              loop={true}
+              pagination={{
+                clickable: true,
+                el: '.our-partners__swiper-pagination',
+                renderBullet: function (index, className) {
+                  return `<span class=${className}><i class="far fa-circle"></i></span>`
+                },
+              }}
+            >
+              <SwiperSlide>
+                <img
+                  src='https://images.pexels.com/photos/2356045/pexels-photo-2356045.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+                  alt='volunteer-image'
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  src='https://images.pexels.com/photos/2387873/pexels-photo-2387873.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+                  alt='volunteer-image'
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  src='https://images.pexels.com/photos/1591373/pexels-photo-1591373.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+                  alt='volunteer-image'
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  src='https://images.pexels.com/photos/8241135/pexels-photo-8241135.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+                  alt='volunteer-image'
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  src='https://images.pexels.com/photos/4275885/pexels-photo-4275885.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+                  alt='volunteer-image'
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  src='https://images.pexels.com/photos/1310788/pexels-photo-1310788.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+                  alt='volunteer-image'
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  src='https://images.pexels.com/photos/4825701/pexels-photo-4825701.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+                  alt='volunteer-image'
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  src='https://images.pexels.com/photos/3757144/pexels-photo-3757144.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+                  alt='volunteer-image'
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  src='https://images.pexels.com/photos/1660995/pexels-photo-1660995.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+                  alt='volunteer-image'
+                />
+              </SwiperSlide>
+            </Swiper>
+            <Box className='our-partners__swiper-pagination'></Box>
+          </Box>
+        </Container>
+      </Box>
     </>
   )
 }
