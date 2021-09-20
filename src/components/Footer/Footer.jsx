@@ -16,8 +16,6 @@ import Icon from '@material-ui/core/Icon'
 
 import Container from 'components/CustommContainer/CustomContainer'
 
-import 'assets/scss/components/footer.scss'
-
 const Footer = () => {
   const menuLists = ['home', 'about us', 'causes', 'events', 'pages', 'contact']
 

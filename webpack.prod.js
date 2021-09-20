@@ -16,7 +16,8 @@ const plugins = [
   new LodashModuleReplacementPlugin(),
   new MomentLocalesPlugin(),
   new MiniCssExtractPlugin({
-    filename: 'style.[contenthash].css',
+    filename: ({ chunk }) =>
+      `${chunk.name === 'bundle' ? 'style' : chunk.name}.[contenthash].css`,
   }),
   new HtmlWebpackPlugin({
     template: './src/index.html',
@@ -50,6 +51,12 @@ module.exports = merge(common, {
           test: /[\\/]node_modules[\\/]((?!react).*)/,
           name: 'common',
           chunks: 'all',
+        },
+        styles: {
+          name: 'common',
+          test: /index\.(s[ac]|c)ss$/,
+          chunks: 'all',
+          enforce: true,
         },
       },
     },

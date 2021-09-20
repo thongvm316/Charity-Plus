@@ -3,6 +3,7 @@ const path = require('path')
 module.exports = {
   entry: {
     bundle: './src/index.jsx',
+    // bundle: [babel/polyfills, './src/index.jsx'], // * should revise babel/polyfills as well
   },
 
   module: {

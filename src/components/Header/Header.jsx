@@ -20,8 +20,6 @@ import Image from 'components/Image/Image'
 import Container from 'components/CustommContainer/CustomContainer'
 import Logo from 'assets/img/logo.png'
 
-import 'assets/scss/components/header.scss'
-
 const Header = () => {
   const matchesForMenuList = useMediaQuery('(max-width:959.9px)')
   const matchesForIconBars = useMediaQuery('(min-width:960px)')
