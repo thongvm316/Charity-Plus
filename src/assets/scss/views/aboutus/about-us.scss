@@ -1,96 +1,6 @@
 @import 'assets/scss/variables';
 @import 'assets/scss/responsive';
-
-/* Common variables */
-@mixin lineGreen($width, $height, $bottom, $left) {
-  &::after {
-    position: absolute;
-    content: '';
-    background-color: $greenColor;
-    width: $width;
-    height: $height;
-    bottom: $bottom;
-    left: $left;
-    @content;
-  }
-}
-
-$colorWhite: #fff;
-$greenColor: #82c7a6;
-$grayColor1: #6f7a7f;
-$grayColor2: #e9e9e9;
-$blueColor: #687dd8;
-
-// Banner
-$fontSizeBannerTitle: (
-  'small': 12px,
-  'normal': 18px,
-  'large': 48px,
-);
-
-// Volunteer
-$fontSizeVolunteerTitle: (
-  'small': 12px,
-  'normal': 18px,
-  'large': 30px,
-);
-
-$fontSizeVolunteerContent: (
-  'small': 9px,
-  'normal': 12px,
-  'large': 14px,
-);
-
-// Statistical
-$fontSizeStatisticalIcon: (
-  'small': 18px,
-  'normal': 26px,
-  'large': 40px,
-);
-
-$fontSizeStatisticalNumber: (
-  'small': 16px,
-  'normal': 18px,
-  'large': 30px,
-);
-
-$fontSizeStatisticalText: (
-  'small': 9px,
-  'normal': 12px,
-  'large': 14px,
-);
-
-// volunteer-detail
-$fontSizeVolunteerDetailItemTitle: (
-  'small': 16px,
-  'normal': 18px,
-  'large': 24px,
-);
-
-$fontSizeVolunteerDetailTitle: (
-  'small': 18px,
-  'normal': 24px,
-  'large': 30px,
-);
-
-$fontSizeVolunteerDetailContent: (
-  'small': 9px,
-  'normal': 12px,
-  'large': 14px,
-);
-
-$fontSizeVolunteerDetailCardTitle: (
-  'small': 11px,
-  'normal': 14px,
-  'large': 16px,
-);
-
-// Our-Partners
-$fontSizeOurPartnersMainTitle: (
-  'small': 18px,
-  'normal': 24px,
-  'large': 30px,
-);
+@import './variables-aboutus';
 
 /* Style */
 .banner {
@@ -127,6 +37,9 @@ $fontSizeOurPartnersMainTitle: (
     position: absolute;
     right: 0;
     top: 0;
+
+    width: 137px;
+    height: 222px;
   }
 }
 
@@ -399,12 +312,102 @@ $fontSizeOurPartnersMainTitle: (
 }
 
 /* Responsive */
+.banner {
+  @include screen('xs') {
+    &__title {
+      font-size: map-get($fontSizeBannerTitle, 'small') !important;
+
+      &::after {
+        bottom: 0;
+      }
+    }
+  }
+}
+
+.volunteer {
+  @include breakpoint-down('lg') {
+    height: auto;
+    padding: 2rem 0;
+  }
+
+  @include breakpoint-down('md') {
+    &__image {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  @include breakpoint-down('sm') {
+    &__layout {
+      margin-bottom: 50px;
+
+      > div:first-child {
+        margin-bottom: 1rem;
+      }
+    }
+
+    &__title,
+    &__content {
+      margin-bottom: 20px !important;
+    }
+  }
+}
+
+.statistical {
+  @include screen('xs') {
+    height: 200px;
+
+    &__icon {
+      .material-icons {
+        font-size: map-get($fontSizeStatisticalIcon, 'normal') !important;
+      }
+    }
+
+    &__number {
+      font-size: map-get($fontSizeStatisticalNumber, 'normal') !important;
+    }
+
+    &__text {
+      font-size: map-get($fontSizeStatisticalText, 'small') !important;
+    }
+
+    &__grid-item:nth-child(-n + 3) {
+      &::after {
+        height: 100%;
+      }
+    }
+  }
+}
+
 .volunteer-detail {
   @include screen('xl') {
     &__item--custom-block-one {
       > div:first-child {
         flex-basis: 415px;
         max-width: 415px;
+      }
+    }
+  }
+
+  @include breakpoint-down('lg') {
+    height: auto;
+    padding: 2rem 0;
+  }
+
+  @include breakpoint-down('sm') {
+    &__item--custom-block-one {
+      > div:first-child {
+        margin-bottom: 2rem;
+      }
+    }
+
+    &__grid-container {
+      > div {
+        margin-bottom: 1rem;
+      }
+
+      > div:last-child {
+        margin-bottom: 0;
       }
     }
   }

@@ -53,7 +53,7 @@ const AboutUs = () => {
       <Box className='volunteer'>
         <Container className='volunteer__container'>
           <Grid container className='volunteer__layout'>
-            <Grid item xs={12} sm={12} md={12} lg={12} xl={4}>
+            <Grid item xs={12} sm={5} md={4} lg={4} xl={4}>
               <Image
                 className='volunteer__image'
                 alt='Volunteer'
@@ -61,7 +61,7 @@ const AboutUs = () => {
               />
             </Grid>
 
-            <Grid item xs={12} sm={12} md={12} lg={12} xl={8}>
+            <Grid item xs={12} sm={7} md={8} lg={8} xl={8}>
               <Box className='volunteer__information'>
                 <Typography
                   component='h6'
@@ -96,7 +96,7 @@ const AboutUs = () => {
           <Box className='volunteer__swiper'>
             <Swiper
               slidesPerView={3}
-              spaceBetween={20}
+              spaceBetween={10}
               pagination={{
                 clickable: true,
               }}
@@ -110,6 +110,16 @@ const AboutUs = () => {
                 el: '.volunteer__custom-pagination',
                 renderBullet: function (index, className) {
                   return `<span class=${className}><i class="far fa-circle"></i></span>`
+                },
+              }}
+              breakpoints={{
+                320: {
+                  slidesPerView: 2,
+                  spaceBetween: 10,
+                },
+                600: {
+                  slidesPerView: 3,
+                  spaceBetween: 10,
                 },
               }}
             >
@@ -179,10 +189,10 @@ const AboutUs = () => {
           <Grid container className='statistical__grid-container'>
             <Grid
               item
-              xs={12}
-              sm={12}
-              md={12}
-              lg={12}
+              xs={3}
+              sm={3}
+              md={3}
+              lg={3}
               xl={3}
               className='statistical__grid-item'
             >
@@ -201,10 +211,10 @@ const AboutUs = () => {
 
             <Grid
               item
-              xs={12}
-              sm={12}
-              md={12}
-              lg={12}
+              xs={3}
+              sm={3}
+              md={3}
+              lg={3}
               xl={3}
               className='statistical__grid-item'
             >
@@ -223,10 +233,10 @@ const AboutUs = () => {
 
             <Grid
               item
-              xs={12}
-              sm={12}
-              md={12}
-              lg={12}
+              xs={3}
+              sm={3}
+              md={3}
+              lg={3}
               xl={3}
               className='statistical__grid-item'
             >
@@ -245,10 +255,10 @@ const AboutUs = () => {
 
             <Grid
               item
-              xs={12}
-              sm={12}
-              md={12}
-              lg={12}
+              xs={3}
+              sm={3}
+              md={3}
+              lg={3}
               xl={3}
               className='statistical__grid-item'
             >
@@ -274,7 +284,7 @@ const AboutUs = () => {
             container
             className='volunteer-detail__item volunteer-detail__item--custom-block-one'
           >
-            <Grid item xs={12} sm={12} md={12} lg={12} xl={5}>
+            <Grid item xs={12} sm={12} md={5} lg={5} xl={5}>
               <Image
                 src={VolunteerDetail1}
                 className='volunteer-detail__image-one'
@@ -282,7 +292,7 @@ const AboutUs = () => {
               />
             </Grid>
 
-            <Grid item xs={12} sm={12} md={12} lg={12} xl={7}>
+            <Grid item xs={12} sm={12} md={7} lg={7} xl={7}>
               <Box className='volunteer-detail__info volunteer-detail__info--custom-margin'>
                 <Box className='volunteer-detail__icon-block-one'>
                   <Icon className='far fa-smile'></Icon>
@@ -341,7 +351,7 @@ const AboutUs = () => {
             </Typography>
 
             <Grid container className='volunteer-detail__grid-container'>
-              <Grid item xs={12} sm={12} md={12} lg={12} xl={3}>
+              <Grid item xs={12} sm={6} md={3} lg={3} xl={3}>
                 <Card className='volunteer-detail__card'>
                   <CardActionArea className='volunteer-detail__card-area'>
                     <CardMedia
@@ -389,7 +399,7 @@ const AboutUs = () => {
                 </Card>
               </Grid>
 
-              <Grid item xs={12} sm={12} md={12} lg={12} xl={3}>
+              <Grid item xs={12} sm={6} md={3} lg={3} xl={3}>
                 <Card className='volunteer-detail__card'>
                   <CardActionArea className='volunteer-detail__card-area'>
                     <CardMedia
@@ -437,7 +447,7 @@ const AboutUs = () => {
                 </Card>
               </Grid>
 
-              <Grid item xs={12} sm={12} md={12} lg={12} xl={3}>
+              <Grid item xs={12} sm={6} md={3} lg={3} xl={3}>
                 <Card className='volunteer-detail__card'>
                   <CardActionArea className='volunteer-detail__card-area'>
                     <CardMedia
@@ -485,7 +495,7 @@ const AboutUs = () => {
                 </Card>
               </Grid>
 
-              <Grid item xs={12} sm={12} md={12} lg={12} xl={3}>
+              <Grid item xs={12} sm={6} md={3} lg={3} xl={3}>
                 <Card className='volunteer-detail__card'>
                   <CardActionArea className='volunteer-detail__card-area'>
                     <CardMedia
@@ -549,8 +559,7 @@ const AboutUs = () => {
 
           <Box className='our-partners__swiper'>
             <Swiper
-              slidesPerView={6}
-              spaceBetween={20}
+              spaceBetween={10}
               pagination={{
                 clickable: true,
               }}
@@ -564,6 +573,20 @@ const AboutUs = () => {
                 el: '.our-partners__swiper-pagination',
                 renderBullet: function (index, className) {
                   return `<span class=${className}><i class="far fa-circle"></i></span>`
+                },
+              }}
+              breakpoints={{
+                320: {
+                  slidesPerView: 2,
+                },
+                600: {
+                  slidesPerView: 3,
+                },
+                1280: {
+                  slidesPerView: 5,
+                },
+                1920: {
+                  slidesPerView: 6,
                 },
               }}
             >
