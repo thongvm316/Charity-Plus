@@ -13,7 +13,6 @@ import Typography from 'components/Typography/CustomTypography'
 import Icon from '@material-ui/core/Icon'
 import Card from '@material-ui/core/Card'
 import CardActionArea from '@material-ui/core/CardActionArea'
-import CardActions from '@material-ui/core/CardActions'
 import CardContent from '@material-ui/core/CardContent'
 import CardMedia from '@material-ui/core/CardMedia'
 
@@ -24,9 +23,9 @@ import ImageTitle from 'assets/img/aboutus/image-title.png'
 import VolunteerImageOne from 'assets/img/aboutus/volunteer-image1.jpg'
 import VolunteerDetail1 from 'assets/img/aboutus/volunteer-detail1.jpg'
 import VolunteerCard1 from 'assets/img/aboutus/volunteer-detail-card1.jpg'
-import VolunteerCard2 from 'assets/img/aboutus/volunteer-detail-card1.jpg'
-import VolunteerCard3 from 'assets/img/aboutus/volunteer-detail-card1.jpg'
-import VolunteerCard4 from 'assets/img/aboutus/volunteer-detail-card1.jpg'
+import VolunteerCard2 from 'assets/img/aboutus/volunteer-detail-card2.jpg'
+import VolunteerCard3 from 'assets/img/aboutus/volunteer-detail-card3.jpg'
+import VolunteerCard4 from 'assets/img/aboutus/volunteer-detail-card4.jpg'
 
 import 'swiper/css'
 import 'swiper/css/pagination'
@@ -54,7 +53,7 @@ const AboutUs = () => {
       <Box className='volunteer'>
         <Container className='volunteer__container'>
           <Grid container className='volunteer__layout'>
-            <Grid item xs={12} sm={12} md={12} lg={12} xl={4}>
+            <Grid item xs={12} sm={5} md={4} lg={4} xl={4}>
               <Image
                 className='volunteer__image'
                 alt='Volunteer'
@@ -62,7 +61,7 @@ const AboutUs = () => {
               />
             </Grid>
 
-            <Grid item xs={12} sm={12} md={12} lg={12} xl={8}>
+            <Grid item xs={12} sm={7} md={8} lg={8} xl={8}>
               <Box className='volunteer__information'>
                 <Typography
                   component='h6'
@@ -97,7 +96,7 @@ const AboutUs = () => {
           <Box className='volunteer__swiper'>
             <Swiper
               slidesPerView={3}
-              spaceBetween={20}
+              spaceBetween={10}
               pagination={{
                 clickable: true,
               }}
@@ -111,6 +110,16 @@ const AboutUs = () => {
                 el: '.volunteer__custom-pagination',
                 renderBullet: function (index, className) {
                   return `<span class=${className}><i class="far fa-circle"></i></span>`
+                },
+              }}
+              breakpoints={{
+                320: {
+                  slidesPerView: 2,
+                  spaceBetween: 10,
+                },
+                600: {
+                  slidesPerView: 3,
+                  spaceBetween: 10,
                 },
               }}
             >
@@ -180,10 +189,10 @@ const AboutUs = () => {
           <Grid container className='statistical__grid-container'>
             <Grid
               item
-              xs={12}
-              sm={12}
-              md={12}
-              lg={12}
+              xs={3}
+              sm={3}
+              md={3}
+              lg={3}
               xl={3}
               className='statistical__grid-item'
             >
@@ -202,10 +211,10 @@ const AboutUs = () => {
 
             <Grid
               item
-              xs={12}
-              sm={12}
-              md={12}
-              lg={12}
+              xs={3}
+              sm={3}
+              md={3}
+              lg={3}
               xl={3}
               className='statistical__grid-item'
             >
@@ -224,10 +233,10 @@ const AboutUs = () => {
 
             <Grid
               item
-              xs={12}
-              sm={12}
-              md={12}
-              lg={12}
+              xs={3}
+              sm={3}
+              md={3}
+              lg={3}
               xl={3}
               className='statistical__grid-item'
             >
@@ -246,10 +255,10 @@ const AboutUs = () => {
 
             <Grid
               item
-              xs={12}
-              sm={12}
-              md={12}
-              lg={12}
+              xs={3}
+              sm={3}
+              md={3}
+              lg={3}
               xl={3}
               className='statistical__grid-item'
             >
@@ -275,7 +284,7 @@ const AboutUs = () => {
             container
             className='volunteer-detail__item volunteer-detail__item--custom-block-one'
           >
-            <Grid item xs={12} sm={12} md={12} lg={12} xl={5}>
+            <Grid item xs={12} sm={12} md={5} lg={5} xl={5}>
               <Image
                 src={VolunteerDetail1}
                 className='volunteer-detail__image-one'
@@ -283,7 +292,7 @@ const AboutUs = () => {
               />
             </Grid>
 
-            <Grid item xs={12} sm={12} md={12} lg={12} xl={7}>
+            <Grid item xs={12} sm={12} md={7} lg={7} xl={7}>
               <Box className='volunteer-detail__info volunteer-detail__info--custom-margin'>
                 <Box className='volunteer-detail__icon-block-one'>
                   <Icon className='far fa-smile'></Icon>
@@ -342,7 +351,7 @@ const AboutUs = () => {
             </Typography>
 
             <Grid container className='volunteer-detail__grid-container'>
-              <Grid item xs={12} sm={12} md={12} lg={12} xl={3}>
+              <Grid item xs={12} sm={6} md={3} lg={3} xl={3}>
                 <Card className='volunteer-detail__card'>
                   <CardActionArea className='volunteer-detail__card-area'>
                     <CardMedia
@@ -350,6 +359,23 @@ const AboutUs = () => {
                       image={VolunteerCard1}
                       title='Contemplative Reptile'
                     />
+                    <Box className='volunteer-detail__card-icons'>
+                      <IconButton>
+                        <Icon
+                          className='fab fa-facebook-f'
+                          fontSize='small'
+                        ></Icon>
+                      </IconButton>
+                      <IconButton>
+                        <Icon
+                          className='fab fa-twitter'
+                          fontSize='small'
+                        ></Icon>
+                      </IconButton>
+                      <IconButton>
+                        <Icon className='fab fa-google' fontSize='small'></Icon>
+                      </IconButton>
+                    </Box>
                     <CardContent className='volunteer-detail__card-content'>
                       <Typography
                         gutterBottom
@@ -357,7 +383,7 @@ const AboutUs = () => {
                         component='h2'
                         className='volunteer-detail__card-title'
                       >
-                        Lizard
+                        Volunteer name
                       </Typography>
                       <Typography
                         variant='body2'
@@ -370,26 +396,10 @@ const AboutUs = () => {
                       </Typography>
                     </CardContent>
                   </CardActionArea>
-                  <CardActions className='volunteer-detail__card-actions'>
-                    <Button
-                      size='small'
-                      color='primary'
-                      className='volunteer-detail__card-button'
-                    >
-                      Share
-                    </Button>
-                    <Button
-                      size='small'
-                      color='primary'
-                      className='volunteer-detail__card-button'
-                    >
-                      Learn More
-                    </Button>
-                  </CardActions>
                 </Card>
               </Grid>
 
-              <Grid item xs={12} sm={12} md={12} lg={12} xl={3}>
+              <Grid item xs={12} sm={6} md={3} lg={3} xl={3}>
                 <Card className='volunteer-detail__card'>
                   <CardActionArea className='volunteer-detail__card-area'>
                     <CardMedia
@@ -397,6 +407,23 @@ const AboutUs = () => {
                       image={VolunteerCard2}
                       title='Contemplative Reptile'
                     />
+                    <Box className='volunteer-detail__card-icons'>
+                      <IconButton>
+                        <Icon
+                          className='fab fa-facebook-f'
+                          fontSize='small'
+                        ></Icon>
+                      </IconButton>
+                      <IconButton>
+                        <Icon
+                          className='fab fa-twitter'
+                          fontSize='small'
+                        ></Icon>
+                      </IconButton>
+                      <IconButton>
+                        <Icon className='fab fa-google' fontSize='small'></Icon>
+                      </IconButton>
+                    </Box>
                     <CardContent className='volunteer-detail__card-content'>
                       <Typography
                         gutterBottom
@@ -404,7 +431,7 @@ const AboutUs = () => {
                         component='h2'
                         className='volunteer-detail__card-title'
                       >
-                        Lizard
+                        Volunteer name
                       </Typography>
                       <Typography
                         variant='body2'
@@ -417,26 +444,10 @@ const AboutUs = () => {
                       </Typography>
                     </CardContent>
                   </CardActionArea>
-                  <CardActions className='volunteer-detail__card-actions'>
-                    <Button
-                      size='small'
-                      color='primary'
-                      className='volunteer-detail__card-button'
-                    >
-                      Share
-                    </Button>
-                    <Button
-                      size='small'
-                      color='primary'
-                      className='volunteer-detail__card-button'
-                    >
-                      Learn More
-                    </Button>
-                  </CardActions>
                 </Card>
               </Grid>
 
-              <Grid item xs={12} sm={12} md={12} lg={12} xl={3}>
+              <Grid item xs={12} sm={6} md={3} lg={3} xl={3}>
                 <Card className='volunteer-detail__card'>
                   <CardActionArea className='volunteer-detail__card-area'>
                     <CardMedia
@@ -444,6 +455,23 @@ const AboutUs = () => {
                       image={VolunteerCard3}
                       title='Contemplative Reptile'
                     />
+                    <Box className='volunteer-detail__card-icons'>
+                      <IconButton>
+                        <Icon
+                          className='fab fa-facebook-f'
+                          fontSize='small'
+                        ></Icon>
+                      </IconButton>
+                      <IconButton>
+                        <Icon
+                          className='fab fa-twitter'
+                          fontSize='small'
+                        ></Icon>
+                      </IconButton>
+                      <IconButton>
+                        <Icon className='fab fa-google' fontSize='small'></Icon>
+                      </IconButton>
+                    </Box>
                     <CardContent className='volunteer-detail__card-content'>
                       <Typography
                         gutterBottom
@@ -451,7 +479,7 @@ const AboutUs = () => {
                         component='h2'
                         className='volunteer-detail__card-title'
                       >
-                        Lizard
+                        Volunteer name
                       </Typography>
                       <Typography
                         variant='body2'
@@ -464,26 +492,10 @@ const AboutUs = () => {
                       </Typography>
                     </CardContent>
                   </CardActionArea>
-                  <CardActions className='volunteer-detail__card-actions'>
-                    <Button
-                      size='small'
-                      color='primary'
-                      className='volunteer-detail__card-button'
-                    >
-                      Share
-                    </Button>
-                    <Button
-                      size='small'
-                      color='primary'
-                      className='volunteer-detail__card-button'
-                    >
-                      Learn More
-                    </Button>
-                  </CardActions>
                 </Card>
               </Grid>
 
-              <Grid item xs={12} sm={12} md={12} lg={12} xl={3}>
+              <Grid item xs={12} sm={6} md={3} lg={3} xl={3}>
                 <Card className='volunteer-detail__card'>
                   <CardActionArea className='volunteer-detail__card-area'>
                     <CardMedia
@@ -491,6 +503,23 @@ const AboutUs = () => {
                       image={VolunteerCard4}
                       title='Contemplative Reptile'
                     />
+                    <Box className='volunteer-detail__card-icons'>
+                      <IconButton>
+                        <Icon
+                          className='fab fa-facebook-f'
+                          fontSize='small'
+                        ></Icon>
+                      </IconButton>
+                      <IconButton>
+                        <Icon
+                          className='fab fa-twitter'
+                          fontSize='small'
+                        ></Icon>
+                      </IconButton>
+                      <IconButton>
+                        <Icon className='fab fa-google' fontSize='small'></Icon>
+                      </IconButton>
+                    </Box>
                     <CardContent className='volunteer-detail__card-content'>
                       <Typography
                         gutterBottom
@@ -498,7 +527,7 @@ const AboutUs = () => {
                         component='h2'
                         className='volunteer-detail__card-title'
                       >
-                        Lizard
+                        Volunteer name
                       </Typography>
                       <Typography
                         variant='body2'
@@ -511,22 +540,6 @@ const AboutUs = () => {
                       </Typography>
                     </CardContent>
                   </CardActionArea>
-                  <CardActions className='volunteer-detail__card-actions'>
-                    <Button
-                      size='small'
-                      color='primary'
-                      className='volunteer-detail__card-button'
-                    >
-                      Share
-                    </Button>
-                    <Button
-                      size='small'
-                      color='primary'
-                      className='volunteer-detail__card-button'
-                    >
-                      Learn More
-                    </Button>
-                  </CardActions>
                 </Card>
               </Grid>
             </Grid>
@@ -534,7 +547,108 @@ const AboutUs = () => {
         </Container>
       </Box>
 
-      <Box className='our-partners'></Box>
+      <Box className='our-partners'>
+        <Container className='our-partners__container'>
+          <Typography
+            className='our-partners__main-title'
+            variant='h5'
+            component='h5'
+          >
+            Our Partners
+          </Typography>
+
+          <Box className='our-partners__swiper'>
+            <Swiper
+              spaceBetween={10}
+              pagination={{
+                clickable: true,
+              }}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
+              loop={true}
+              pagination={{
+                clickable: true,
+                el: '.our-partners__swiper-pagination',
+                renderBullet: function (index, className) {
+                  return `<span class=${className}><i class="far fa-circle"></i></span>`
+                },
+              }}
+              breakpoints={{
+                320: {
+                  slidesPerView: 2,
+                },
+                600: {
+                  slidesPerView: 3,
+                },
+                1280: {
+                  slidesPerView: 5,
+                },
+                1920: {
+                  slidesPerView: 6,
+                },
+              }}
+            >
+              <SwiperSlide>
+                <img
+                  src='https://images.pexels.com/photos/2356045/pexels-photo-2356045.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+                  alt='volunteer-image'
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  src='https://images.pexels.com/photos/2387873/pexels-photo-2387873.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+                  alt='volunteer-image'
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  src='https://images.pexels.com/photos/1591373/pexels-photo-1591373.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+                  alt='volunteer-image'
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  src='https://images.pexels.com/photos/8241135/pexels-photo-8241135.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+                  alt='volunteer-image'
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  src='https://images.pexels.com/photos/4275885/pexels-photo-4275885.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+                  alt='volunteer-image'
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  src='https://images.pexels.com/photos/1310788/pexels-photo-1310788.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+                  alt='volunteer-image'
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  src='https://images.pexels.com/photos/4825701/pexels-photo-4825701.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+                  alt='volunteer-image'
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  src='https://images.pexels.com/photos/3757144/pexels-photo-3757144.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+                  alt='volunteer-image'
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  src='https://images.pexels.com/photos/1660995/pexels-photo-1660995.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+                  alt='volunteer-image'
+                />
+              </SwiperSlide>
+            </Swiper>
+            <Box className='our-partners__swiper-pagination'></Box>
+          </Box>
+        </Container>
+      </Box>
     </>
   )
 }
