@@ -12,7 +12,6 @@ SwiperCore.use([EffectCoverflow])
 
 import 'swiper/css'
 import 'swiper/css/effect-coverflow'
-import 'swiper/css/pagination'
 import 'assets/scss/views/home/swiper.scss'
 
 const SwiperComponent = () => {
@@ -31,7 +30,6 @@ const SwiperComponent = () => {
           modifier: 1,
           slideShadows: true,
         }}
-        pagination={true}
         className='mySwiper'
       >
         <SwiperSlide className='swiper-home__slide'>

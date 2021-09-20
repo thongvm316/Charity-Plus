@@ -26,3 +26,17 @@ body {
 
 @import 'assets/scss/components/header.scss';
 @import 'assets/scss/components/footer.scss';
+
+/* Swiper common style */
+.swiper {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 32px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

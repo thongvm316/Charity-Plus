@@ -560,9 +560,6 @@ const AboutUs = () => {
           <Box className='our-partners__swiper'>
             <Swiper
               spaceBetween={10}
-              pagination={{
-                clickable: true,
-              }}
               autoplay={{
                 delay: 2500,
                 disableOnInteraction: false,

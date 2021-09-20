@@ -78,43 +78,6 @@
     background-color: $blueColor !important;
   }
 
-  &__swiper {
-    padding: 0 15px;
-
-    .swiper {
-      width: 100%;
-      height: 100%;
-      margin-bottom: 32px;
-    }
-
-    .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      background: #fff;
-
-      /* Center slide text vertically */
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      -webkit-justify-content: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      -webkit-align-items: center;
-      align-items: center;
-    }
-
-    .swiper-slide img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
-
   &__custom-pagination {
     text-align: center;
 
@@ -276,10 +239,6 @@
 
   background-color: $grayColor2;
   height: 420px;
-
-  &__swiper {
-    @extend .volunteer__swiper;
-  }
 
   &__swiper-pagination {
     text-align: center;

@@ -1,0 +1,70 @@
+/* Common variables */
+@mixin lineGreen($width, $height, $bottom, $left) {
+  &::after {
+    position: absolute;
+    content: '';
+    background-color: $greenColor;
+    width: $width;
+    height: $height;
+    bottom: $bottom;
+    left: $left;
+    @content;
+  }
+}
+
+$colorWhite: #fff;
+$greenColor: #82c7a6;
+$grayColor1: #6f7a7f;
+$grayColor2: #e9e9e9;
+$blueColor: #687dd8;
+
+// Causes Banner
+$fontSizeBannerTitle: (
+  'small': 28px,
+  'normal': 38px,
+  'large': 48px,
+);
+
+// Causes Featurd
+$fontSizeFeaturdMainTitle: (
+  'small': 18px,
+  'normal': 24px,
+  'large': 30px,
+);
+
+$fontSizeFeaturdTitleDetail: (
+  'small': 9px,
+  'normal': 12px,
+  'large': 14px,
+);
+
+$fontSizeFeaturdDonateTitle: (
+  'small': 12px,
+  'normal': 16px,
+  'large': 20px,
+);
+
+$fontSizeFeaturdDonateContent: (
+  'small': 9px,
+  'normal': 12px,
+  'large': 14px,
+);
+
+$fontSizeFeaturdRaised: (
+  'small': 6px,
+  'normal': 9px,
+  'large': 12px,
+);
+
+$fontSizeFeaturdRaisedSpan: (
+  'small': 12px,
+  'normal': 16px,
+  'large': 20px,
+);
+
+// Our-Partners
+$fontSizeOurPartnersMainTitle: (
+  'small': 18px,
+  'normal': 24px,
+  'large': 30px,
+);
