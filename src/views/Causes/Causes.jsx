@@ -35,7 +35,6 @@ import 'assets/scss/views/causes/causes.scss'
 
 const Causes = () => {
   const swiperRef = React.useRef(null)
-
   return (
     <>
       <Box className='causes-banner'>

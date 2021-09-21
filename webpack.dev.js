@@ -28,7 +28,7 @@ module.exports = merge(common, {
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'static/js/[name].js',
-    // assetModuleFilename: 'static/images/[hash][ext][query]',
+
     publicPath: '/',
   },
 
