@@ -1,5 +1,5 @@
 /* Common variables */
-@mixin lineGreen($width, $height, $bottom, $left) {
+@mixin lineGreen($width: 20px, $height: 2px, $bottom: 0, $left: 50%) {
   &::after {
     position: absolute;
     content: '';
@@ -60,6 +60,24 @@ $fontSizeFeaturdRaisedSpan: (
   'small': 12px,
   'normal': 16px,
   'large': 20px,
+);
+
+$fontSizeFeaturdEventsTitle: (
+  'small': 12px,
+  'normal': 16px,
+  'large': 20px,
+);
+
+$fontSizeFeaturdEventsSwiperDateH5: (
+  'small': 18px,
+  'normal': 26px,
+  'large': 33px,
+);
+
+$fontSizeFeaturdEventsSwiperDateP: (
+  'small': 6px,
+  'normal': 8px,
+  'large': 11px,
 );
 
 // Our-Partners

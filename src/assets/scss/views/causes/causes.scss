@@ -43,7 +43,7 @@
 }
 
 .causes-featurd {
-  //   height: 1926px;
+  height: 1926px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -76,6 +76,10 @@
 
   &__paper--flex {
     display: flex;
+  }
+
+  &__paper--bottom {
+    margin-bottom: 60px;
   }
 
   &__image-one {
@@ -148,6 +152,80 @@
     .MuiButton-containedPrimary {
       background-color: $blueColor;
     }
+  }
+
+  &__topic {
+    display: flex;
+    margin-bottom: 60px;
+  }
+
+  &__topic-media {
+    width: 358px;
+    height: 363px;
+  }
+
+  &__topic-card--margin {
+    margin-right: 15px;
+  }
+
+  &__events {
+    width: 100%;
+    height: 465px;
+    padding: 2rem;
+
+    background-color: $greenColor;
+  }
+
+  &__events-title {
+    position: relative;
+    margin-bottom: 30px !important;
+
+    font-size: map-get($fontSizeFeaturdEventsTitle, 'large') !important;
+    font-family: $rufina !important;
+    color: $colorWhite;
+
+    @include lineGreen() {
+      background-color: $blueColor;
+      left: 0;
+    }
+  }
+
+  &__swiper-divider {
+    margin: 1rem 0 1.5rem 0 !important;
+    background-color: $colorWhite !important;
+  }
+
+  &__events-swiper-slide {
+    > .MuiGrid-container {
+      height: 38%;
+
+      > div {
+        height: 100%;
+      }
+    }
+  }
+
+  &__swiper-date {
+    display: flex;
+
+    h5 {
+      font-size: map-get(
+        $fontSizeFeaturdEventsSwiperDateH5,
+        'large'
+      ) !important;
+      font-family: $rufina !important;
+      margin-right: 4px;
+    }
+
+    p {
+      font-size: map-get($fontSizeFeaturdEventsSwiperDateP, 'large') !important;
+      padding-top: 0.7rem;
+    }
+  }
+
+  &__swiper-content {
+    overflow: hidden;
+    height: 70%;
   }
 }
 
