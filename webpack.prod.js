@@ -17,7 +17,9 @@ const plugins = [
   new MomentLocalesPlugin(),
   new MiniCssExtractPlugin({
     filename: ({ chunk }) =>
-      `${chunk.name === 'bundle' ? 'style' : chunk.name}.[contenthash].css`,
+      `static/css/${
+        chunk.name === 'bundle' ? 'style' : chunk.name
+      }.[contenthash].css`,
   }),
   new HtmlWebpackPlugin({
     template: './src/index.html',
@@ -33,9 +35,9 @@ module.exports = merge(common, {
   target: 'browserslist',
 
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: '[name].[contenthash].js',
-    assetModuleFilename: 'images/[hash][ext][query]',
+    path: path.resolve(__dirname, 'build'),
+    filename: 'static/js/[name].[contenthash].js',
+    assetModuleFilename: 'static/media/[hash][ext][query]',
     publicPath: '/',
   },
 

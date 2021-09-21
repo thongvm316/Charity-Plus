@@ -8,14 +8,14 @@
     "npm": "6.14.10"
   },
   "scripts": {
-    "start": "serve -s dist",
+    "start": "serve -s build",
     "dev": "SERVE=true webpack serve --config webpack.dev.js --progress",
     "build": "NODE_ENV=production webpack --config webpack.prod.js --progress",
     "build:analyze": "NODE_ENV=production BUNDLE_ANALYZE=true webpack  --config webpack.prod.js --progress",
-    "build:serve": "npm run-script build && serve dist",
+    "build:serve": "npm run-script build && serve -s build",
     "build-dev": "webpack --config webpack.dev.js --progress",
     "watch": "webpack --config webpack.prod.js --watch --progress",
-    "clean": "rm -fr dist",
+    "clean": "rm -fr build",
     "heroku-postbuild": "npm run build"
   },
   "devDependencies": {
