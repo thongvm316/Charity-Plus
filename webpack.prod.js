@@ -37,7 +37,7 @@ module.exports = merge(common, {
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'static/js/[name].[contenthash].js',
-    assetModuleFilename: 'static/media/[hash][ext][query]',
+    // assetModuleFilename: 'static/media/[hash][ext][query]',
     publicPath: '/',
   },
 
